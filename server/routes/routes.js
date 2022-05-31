@@ -3,6 +3,7 @@ import { createCoaching, deleteCoaching, getCoaching, getCoachings, updateCoachi
 import { createCuenta, deleteCuenta,  getCuenta, getCuentas, updateCuenta } from "../controllers/cuentas.controllers.js";
 import { createEloboost, deleteEloboost, getEloboost, getEloboosts, updateEloboost } from "../controllers/eloboosts.controller.js";
 import { createMaestria, deleteMaestria, getMaestria, getMaestrias, updateMaestria } from "../controllers/maestrias.controllers.js";
+import { getpedido, getPedidos, updatePedido, deletePedido, createPedido } from "../controllers/pedidos.controllers.js";
 import { createProducto, deleteProducto, getProducto, getProductos, updateProducto } from "../controllers/productos.controller.js";
 import { createUsuario, deleteUsuario, getUsuario, getUsuarios, updateUsuario, getmiperfil, login } from "../controllers/usuarios.controllers.js";
 import verificartoken from "../controllers/verificarToken.js";
@@ -46,5 +47,10 @@ router.delete('/usuarios/:id', verificartoken, deleteUsuario)
 router.get('/mi-perfil', verificartoken, getmiperfil)
 router.post('/login', verificartoken, login)
 
+router.get('/pedidos', verificartoken, getPedidos)
+router.get('/pedidos/:id', verificartoken, getpedido)
+router.post('/pedidos/', verificartoken, createPedido)
+router.put('/pedidos/:id', verificartoken, updatePedido)
+router.delete('/pedidos/:id', verificartoken, deletePedido)
 
 export default router

@@ -1,5 +1,11 @@
+import Productos from "./productos"
+import eloboost from "./eloboosts"
+import coachings from "./coachings"
+import maestrias from "./maestrias";
+import cuentas from "./cuentas";
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
+import pedidos from "./pedidos";
 const usuariosSchema = new mongoose.Schema({
     nombre_usuario: {
         type: String,
@@ -34,8 +40,23 @@ const usuariosSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
-    carrito:{
-        type: []
+    carrito_cuentas:{
+        type: [cuentas]
+    },
+    carrito_productos:{
+        type: [Productos]
+    },
+    historial_maestrias:{
+        type: [maestrias]
+    },
+    historial_coachings:{
+        type: [coachings]
+    },
+    historial_eloboosts:{
+        type: [eloboost]
+    },
+    historial_pedidos:{
+        type: [pedidos]
     }
 })
 
