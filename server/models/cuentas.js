@@ -48,6 +48,7 @@ const cuentasSchema = new mongoose.Schema({
     correo_cuenta:{
         type: String,
         required: true,
+        unique: true,
         trim: true
     },
     contraseña_cuenta:{
@@ -58,6 +59,7 @@ const cuentasSchema = new mongoose.Schema({
     nombre_invocador:{
         type: String,
         required: true,
+        unique: true,
         trim: true
     },
     id_comprador:{

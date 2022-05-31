@@ -26,11 +26,12 @@ const coachingSchema = new mongoose.Schema({
         required: true
     },
     id_cliente: {
-        type: String,
+        type: [String],
         trim: true
     },
     id_booster: {
         type: String,
+        required: true,
         trim: true
     },
     precio: {

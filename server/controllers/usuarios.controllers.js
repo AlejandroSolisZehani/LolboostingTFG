@@ -28,8 +28,8 @@ export const getUsuario = async (req, res) => {
 }
 export const createUsuario = async (req, res) => {
     try {
-        const {nombre_usuario,contraseña_usuario,telefono_usuario,email_usuario,direccion,roles,carrito} = req.body
-    const nuevoUsuario = new Usuarios({nombre_usuario,contraseña_usuario,telefono_usuario,email_usuario,direccion,roles,carrito})
+        const {nombre_usuario,url_imagen,contraseña_usuario,telefono_usuario,email_usuario,direccion,roles,carrito} = req.body
+    const nuevoUsuario = new Usuarios({nombre_usuario,url_imagen,contraseña_usuario,telefono_usuario,email_usuario,direccion,roles,carrito})
     nuevoUsuario.contraseña_usuario = await nuevoUsuario.encryptPassword(nuevoUsuario.contraseña_usuario)
     console.log(nuevoUsuario)
     await nuevoUsuario.save()

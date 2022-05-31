@@ -13,6 +13,11 @@ const usuariosSchema = new mongoose.Schema({
         unique: true,
         trim: true
     },
+    url_imagen:{
+        type: String,
+        required: true,
+        trim: true
+    },
     contraseña_usuario:{
         type: String,
         required: true,
