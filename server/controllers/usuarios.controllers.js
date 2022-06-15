@@ -1,5 +1,6 @@
 import Usuarios from "../models/usuarios.js"
 import jsonwebtoken from "jsonwebtoken"
+import bcrypt from "bcryptjs";
 import secret from "../config.js"
 export const getUsuarios = async (req, res) => {
     try {
@@ -12,8 +13,7 @@ export const getUsuarios = async (req, res) => {
 export const getUsuario = async (req, res) => {
     try {
         
-        const decoded = jsonwebtoken.verify(token, secret)
-        console.log(decoded)
+        
         const ObtenerUsurio = await Usuarios.findById(req.params.id)
     if (!ObtenerUsurio){
         return res.sendStatus(404)
@@ -28,8 +28,8 @@ export const getUsuario = async (req, res) => {
 }
 export const createUsuario = async (req, res) => {
     try {
-        const {nombre_usuario,url_imagen,contraseña_usuario,telefono_usuario,email_usuario,direccion,roles,carrito} = req.body
-    const nuevoUsuario = new Usuarios({nombre_usuario,url_imagen,contraseña_usuario,telefono_usuario,email_usuario,direccion,roles,carrito})
+        const {nombre_usuario,url_imagen,contraseña_usuario,telefono_usuario,email_usuario,direccion,roles,saldo} = req.body
+    const nuevoUsuario = new Usuarios({nombre_usuario,url_imagen,contraseña_usuario,telefono_usuario,email_usuario,direccion,roles,saldo})
     nuevoUsuario.contraseña_usuario = await nuevoUsuario.encryptPassword(nuevoUsuario.contraseña_usuario)
     console.log(nuevoUsuario)
     await nuevoUsuario.save()
@@ -44,6 +44,7 @@ export const createUsuario = async (req, res) => {
 export const updateUsuario = async (req, res) => {
     try {
         const actualizarUsuario = await Usuarios.findByIdAndUpdate(req.params.id, req.body, {new: true})
+        //const actualizarUsuario = await Usuarios.findByIdAndUpdate(req.params.id, req.body, {new: true})
     console.log(actualizarUsuario)
     return res.send(actualizarUsuario)
     } catch (error) {
@@ -76,20 +77,20 @@ export const getmiperfil = async (req, res) =>{
 }
 export const login = async (req, res) =>{
     try {
-        const {email, contraseña} = req.body
-        const user = await Usuarios.findOne({email_usuario: email})
+        const {email_usuario, contraseña_usuario} = req.body
+        const user = await Usuarios.findOne({email_usuario: email_usuario})
         if(!user){
-            return res.status(404).send('Email no registrado')
+            return res.status(404).json({message:'Email no registrado'})
         }
-        const contraseñavalida = await user.validatePassword(contraseña)
+        const contraseñavalida = await user.validatePassword(contraseña_usuario)
         if(!contraseñavalida) {
-            res.status(401).json({auth: false, token: null})
+            res.status(401).json({auth: false, token: null, message: "Contraseña no valida"})
         }else{
             const token = jsonwebtoken.sign({id: user._id}, secret, {
                 expiresIn: 60 * 60 *24
             })
-    
-            res.json({auth: true, token})
+            const id = jsonwebtoken.decode(token)
+            res.json({auth: true, token, id})
         }
 
        

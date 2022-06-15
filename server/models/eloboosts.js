@@ -20,18 +20,18 @@ const eloboostSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    roles_preferidos: {
-        type: [String],
+    rol_preferido: {
+        type: String,
         required: true,
         trim: true
     },
     id_booster: {
         type: String,
-        required: true,
         trim: true
     },
     id_cliente: {
         type: String,
+        required: true,
         trim: true
     },
     nombre_cuenta:{
@@ -44,8 +44,8 @@ const eloboostSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
-    campeones_preferidos:{
-        type: [String],
+    campeon_preferido:{
+        type: String,
         required: true,
         trim: true
     },

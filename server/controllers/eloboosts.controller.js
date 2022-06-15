@@ -22,9 +22,9 @@ export const getEloboost = async (req, res) => {
 }
 export const createEloboost = async (req, res) => {
     try {
-    const {titulo,liga_inicio,liga_deseada,precio,id_booster,id_cliente,nombre_cuenta,passwd_cuenta,roles_preferidos,campeones_preferidos,activo} = req.body
+    const {titulo,liga_inicio,liga_deseada,precio,id_booster,id_cliente,nombre_cuenta,passwd_cuenta,rol_preferido,campeon_preferido,activo} = req.body
 
-    const nuevoBoost = new eloboosts({titulo,liga_inicio,liga_deseada,precio,id_booster,id_cliente,nombre_cuenta,passwd_cuenta,roles_preferidos,campeones_preferidos,activo})
+    const nuevoBoost = new eloboosts({titulo,liga_inicio,liga_deseada,precio,id_booster,id_cliente,nombre_cuenta,passwd_cuenta,rol_preferido,campeon_preferido,activo})
     
     await nuevoBoost.save()
     return res.send(nuevoBoost)

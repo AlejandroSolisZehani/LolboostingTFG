@@ -6,5 +6,5 @@ import { connectDB } from "./db.js";
 
 connectDB()
 
-app.listen(3000);
-console.log('El servidor esta corriendo en el puerto', 3000)
+app.listen(4000);
+console.log('El servidor esta corriendo en el puerto', 4000)

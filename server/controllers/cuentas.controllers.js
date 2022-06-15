@@ -23,12 +23,17 @@ export const getCuenta = async (req, res) => {
 
 export const createCuenta = async (req, res) => {
     try {
-        const {titulo,servidor,campeones,aspectos,rango_temporada_pasada,email_verificado,nivel_cuenta,rango_temporada_actual,riot_points,esencia_azul,contraseña_cuenta,correo_cuenta,nombre_invocador,id_comprador,id_vendedor,activo} = req.body
-    const nuevacuenta = new Cuentas({titulo,servidor,campeones,aspectos,rango_temporada_pasada,email_verificado,nivel_cuenta,rango_temporada_actual,riot_points,esencia_azul,contraseña_cuenta,correo_cuenta,nombre_invocador,id_comprador,id_vendedor,activo})
-
+    const {titulo,servidor,campeones,aspectos,rango_temporada_pasada,email_verificado,nivel_cuenta,rango_temporada_actual,riot_points,esencia_azul,contraseña_cuenta,correo_cuenta,nombre_invocador,id_comprador,id_vendedor,precio,activo} = req.body
+    const nuevacuenta = new Cuentas({titulo,servidor,campeones,aspectos,rango_temporada_pasada,email_verificado,nivel_cuenta,rango_temporada_actual,riot_points,esencia_azul,contraseña_cuenta,correo_cuenta,nombre_invocador,id_comprador,id_vendedor,precio,activo})
     console.log(nuevacuenta)
-    await nuevacuenta.save()
-    return res.send(nuevacuenta)
+    const comprobarcorreo = await Cuentas.findOne({correo_cuenta: correo_cuenta})
+    if(!comprobarcorreo){
+        await nuevacuenta.save()
+        return res.send(nuevacuenta)
+    }else{
+        return res.status(404).send('Ya existe una cuenta con ese email')
+    }
+   
     } catch (error) {
         return res.status(500).json({message: error.message})
     }

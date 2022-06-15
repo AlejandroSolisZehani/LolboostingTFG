@@ -1,6 +1,12 @@
 import mongoose from "mongoose";
 
 const cuentasSchema = new mongoose.Schema({
+    correo_cuenta:{
+        type: String,
+        unique: true,
+        required: true,
+        trim: true
+    },
     titulo: {
         type: String,
         required: true,
@@ -45,12 +51,6 @@ const cuentasSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
-    correo_cuenta:{
-        type: String,
-        required: true,
-        unique: true,
-        trim: true
-    },
     contraseña_cuenta:{
         type: String,
         required: true,
@@ -69,6 +69,9 @@ const cuentasSchema = new mongoose.Schema({
     id_vendedor:{
         type: String,
         trim: true
+    },
+    precio:{
+        type: Number
     },
     activo: {
         type: Boolean,
