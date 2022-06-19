@@ -21,6 +21,9 @@ function Vercuenta() {
           No se ha encontrado la cuenta
       </div>
           
+      }else if(cuenta.activo===false){
+
+        return <div>Esta solicitud de boost de Maestria ya no esta activa</div>
       }else{
         return <div className='Cuenta'>
         <Tarjetacuenta cuentadatos={cuenta} key={cuenta._id}/>

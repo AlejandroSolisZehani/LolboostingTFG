@@ -32,9 +32,8 @@ export default function Login() {
           toast.success("Has iniciado sesion correctamente",{duration:2500})
           localStorage.setItem("TokenUsuario",res.data.token)
           localStorage.setItem("IdUsuario",res.data.id.id)
-          const objeto = {}
-          localStorage.setItem("Carrito",JSON.stringify(objeto))
-          navigate("/")
+          localStorage.removeItem("Carrito")
+          navigate("/miperfil")
         }
         
       })

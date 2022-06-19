@@ -21,8 +21,8 @@ export const getCoaching = async (req, res) => {
 }
 export const createCoaching = async (req, res) => {
     try {
-        const {titulo,servidor,roles_preferidos,idioma,partidas,id_cliente,id_booster,precio,activo} = req.body
-    const nuevocoaching = new coachings({titulo,servidor,roles_preferidos,idioma,partidas,id_cliente,id_booster,precio,activo})
+        const {titulo,servidor,roles_preferidos,idioma,partidas,id_cliente,id_booster,precio,activo,correo_coach} = req.body
+    const nuevocoaching = new coachings({titulo,servidor,roles_preferidos,idioma,partidas,id_cliente,id_booster,precio,activo,correo_coach})
 
     console.log(nuevocoaching)
     await nuevocoaching.save()

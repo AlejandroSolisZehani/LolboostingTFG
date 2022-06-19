@@ -21,8 +21,8 @@ export const getProducto = async (req, res) => {
 }
 export const createProducto = async (req, res) => {
     try {
-        const {titulo,cantidad,precio,detalles,imagenes,id_cliente,activo} = req.body
-    const nuevoProducto = new productos({titulo,cantidad,precio,detalles,imagenes,id_cliente,activo})
+        const {titulo,precio,detalles,imagenes,activo} = req.body
+    const nuevoProducto = new productos({titulo,precio,detalles,imagenes,activo})
 
     console.log(nuevoProducto)
     await nuevoProducto.save()

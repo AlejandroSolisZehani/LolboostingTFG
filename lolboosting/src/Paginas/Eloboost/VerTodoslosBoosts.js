@@ -30,7 +30,7 @@ export default function VerTodoslosBoosts() {
       if(Boost.length===0){
         return <div>No hay solicitudes de Boost todavia</div>
       }else{
-        return <div className='grid grid-cols-3 gap-3'>
+        return <div className='grid grid-cols-1 gap-10'>
         {Boost.filter(Boost=> Boost.activo===true).map(Boost=>(
             <TarjetasBoosts Boost={Boost} key={Boost._id}/>
         ))}

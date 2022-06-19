@@ -22,8 +22,8 @@ export const getMaestria = async (req, res) => {
 }
 export const createMaestria = async (req, res) => {
     try {
-        const {titulo,numero_campeones,nivel_maestria_actual,maestria_deseada,precio,nombre_cuenta,passwd_cuenta,id_booster,id_cliente,activo} = req.body
-    const nuevaMaestria = new maestrias({titulo,numero_campeones,nivel_maestria_actual,maestria_deseada,precio,nombre_cuenta,passwd_cuenta,id_booster,id_cliente,activo})
+        const {titulo,campeon,nivel_maestria_actual,maestria_deseada,precio,nombre_cuenta,passwd_cuenta,id_booster,id_cliente,activo} = req.body
+    const nuevaMaestria = new maestrias({titulo,campeon,nivel_maestria_actual,maestria_deseada,precio,nombre_cuenta,passwd_cuenta,id_booster,id_cliente,activo})
 
     console.log(nuevaMaestria)
     await nuevaMaestria.save()

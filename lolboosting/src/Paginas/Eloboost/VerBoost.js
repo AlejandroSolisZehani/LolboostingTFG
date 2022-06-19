@@ -31,8 +31,12 @@ export function VerBoost() {
       const [Boost, setBoost] = useState([])
       if(Boost.length===0){
         return <div>No hay solicitudes de Boost todavia</div>
-      }else{
-        return <div className='grid grid-cols-3 gap-3'>
+      }else if(Boost.activo===false){
+
+        return <div>Esta solicitud de boost de Maestria ya no esta activa</div>
+      }
+      else{
+        return <div className='grid grid-cols-1 gap-10'>
             <TarjetaBoost Boost={Boost} key={Boost._id}/>
     </div>
 }

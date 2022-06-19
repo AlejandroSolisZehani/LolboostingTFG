@@ -6,9 +6,10 @@ const maestriasSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
-    numero_campeones:{
-        type: Number,
-        required: true
+    campeon:{
+        type: String,
+        required: true,
+        trim: true
     },
     nivel_maestria_actual:{
         type: Number,
@@ -34,11 +35,11 @@ const maestriasSchema = new mongoose.Schema({
     },
     id_booster: {
         type: String,
-        required: true,
         trim: true
     },
     id_cliente: {
         type: String,
+        required: true,
         trim: true
     },activo: {
         type: Boolean,

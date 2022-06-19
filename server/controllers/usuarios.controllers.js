@@ -34,7 +34,7 @@ export const createUsuario = async (req, res) => {
     console.log(nuevoUsuario)
     await nuevoUsuario.save()
     const token = jsonwebtoken.sign({id: nuevoUsuario._id}, secret, {
-        expiresIn: 60 * 60 * 24
+        expiresIn: 60 * 60 * 24 * 7
     })
     res.json({auth: true, token: token})
     } catch (error) {

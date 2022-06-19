@@ -179,9 +179,10 @@ function CrearSolicitud() {
                         console.log(res)
                         if(res.status===200){
                           console.log(res)
+                          toast.dismiss()
                           toast.success("Se ha solicitado el servicio de eloboost correctamente")
                           navigate("/boost")
-                          toast.dismiss(t.id)
+                          
                         }
                       })
                       .catch(error => {

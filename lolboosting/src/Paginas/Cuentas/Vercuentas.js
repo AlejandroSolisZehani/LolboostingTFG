@@ -24,10 +24,10 @@ function Vercuentas() {
   }, []); 
     
 
-  if(cuentas.length===0){
+  if(cuentas.filter(cuenta=> cuenta.activo===true).length===0){
     return <div>No hay cuentas todavia</div>
   }else{
-    return <div className='grid grid-cols-3 gap-2'>
+    return <div className='grid grid-cols-1 gap-10'>
         {cuentas.filter(cuenta=> cuenta.activo===true).map(cuenta=>(
             <Tarjetavercuentas cuentadatos={cuenta} key={cuenta._id}/>
         ))}

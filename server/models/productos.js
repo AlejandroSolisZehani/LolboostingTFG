@@ -5,10 +5,6 @@ const productosSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
-    cantidad: {
-        type: Number,
-        required: true
-    },
     precio: {
         type: Number,
         required: true,
@@ -18,13 +14,11 @@ const productosSchema = new mongoose.Schema({
         required: true,
     },
     imagenes: {
-        type: [String],
+        type: String,
         required: true,
         trim: true
     },
-    id_cliente: {
-        type: [String]
-    },activo: {
+    activo: {
         type: Boolean,
         required: true
     }

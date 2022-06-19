@@ -7,17 +7,17 @@ const coachingSchema = new mongoose.Schema({
         trim: true
     },
     servidor: {
-        type: [String],
+        type: String,
         required: true,
         trim: true
     },
     roles_preferidos: {
-        type: [String],
+        type: String,
         required: true,
         trim: true
     },
     idioma: {
-        type: [String],
+        type: String,
         required: true,
         trim: true
     },
@@ -26,7 +26,7 @@ const coachingSchema = new mongoose.Schema({
         required: true
     },
     id_cliente: {
-        type: [String],
+        type: String,
         trim: true
     },
     id_booster: {
@@ -41,6 +41,11 @@ const coachingSchema = new mongoose.Schema({
     activo: {
         type: Boolean,
         required: true
+    },
+    correo_coach:{
+        type: String,
+        required: true,
+        trim: true
     }
 })
 
