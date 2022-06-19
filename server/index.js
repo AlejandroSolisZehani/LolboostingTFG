@@ -1,7 +1,7 @@
 import app from "./app.js"
 import { connectDB } from "./db.js";
 
-var port = process.env.port || 4000
+var port = process.env.port || 8000
 
 
 connectDB()
