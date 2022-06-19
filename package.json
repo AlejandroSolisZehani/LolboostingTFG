@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon server"
+    "dev": "nodemon server --ignore client",
+    "build": "npm install --prefix client && npm run build --prefix lolboosting ",
+    "start": "node server"
   },
   "keywords": [],
   "author": "",
