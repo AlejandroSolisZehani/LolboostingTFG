@@ -6,5 +6,8 @@ var port = process.env.port || 4000
 
 connectDB()
 
-app.listen(port);
+app.listen(port, err => {
+    if(err) throw err;
+    console.log("%c Server running", "color: green");
+  });
 console.log('El servidor esta corriendo en el puerto', port)
