@@ -12,4 +12,7 @@ app.use(express.json())
 app.use(postsRoutes)
 console.log(__dirname)
 app.use(express.static(join(__dirname, '../lolboosting/build')))
+app.get('*', (req, res) =>{
+    res.sendFile(join(__dirname, '../lolboosting/build/index.html'))
+})
 export default app
