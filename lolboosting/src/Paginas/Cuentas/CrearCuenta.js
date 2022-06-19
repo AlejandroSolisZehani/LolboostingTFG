@@ -40,7 +40,7 @@ function CrearCuenta() {
             aspectos: Yup.number().required("Es obligatorio poner el numero de aspectos que tiene la cuenta"),
             rango_temporada_pasada: Yup.string().oneOf(rangos).required("El Rango de la temporada pasada es obligatorio ponerlo"),
             email_verificado: Yup.boolean().required("Es obligatorio poner un valor"),
-            nivel_cuenta: Yup.number().required("Obligatorio poner el nivel de la cuenta"),
+            nivel_cuenta: Yup.number().required("Obligatorio poner el nivel de la cuenta").min(1,"Tiene que ser minimo nivel 1"),
             riot_points: Yup.number().required("Es obligatorio poner los riot points"),
             esencia_azul: Yup.number().required("Es obligatorio poner la esencia Azul"),
             correo_cuenta: Yup.string().required("Es obligatorio poner el correo de la cuenta").email("Tiene que ser un email"),
@@ -175,9 +175,10 @@ function CrearCuenta() {
             precio += (values.aspectos*0.5)/100
             precio += (values.esencia_azul*0.1)/100
             precio += (values.riot_points*0.25)/100
-            if(values.email_verificado===true){
+            if(values.email_verificado==true){
               precio += 0.5
             }else{
+              values.email_verificado=false
               precio += 5
             }
             precio += numerorangoinicial*2/2
@@ -356,7 +357,7 @@ function CrearCuenta() {
               <label> Email verificado</label>
              <Field name="email_verificado" placeholder="email_verificado" component="select">
                <option value="True">True</option>
-               <option value="Flase">False</option>
+               <option value="False">False</option>
               </Field>
               <br/>
               <label>Nivel de la cuenta</label><br></br>

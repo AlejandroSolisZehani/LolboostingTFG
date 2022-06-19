@@ -6,7 +6,7 @@ import {Aterrizaje,Login,NotFound, Registrarse, Vercuentas, Vercuenta,
   CrearProducto, VerProducto, VerTodoslosProductos, EditarProducto,
   Dashboard, Añadiradmin, Verusuarios, AdminCuentas, AdminMaestrias, Admincoachings, Admineloboosts,
   UsuarioCoachings, UsuarioCuentas, UsuarioEloboosts, UsuarioMaestrias, Carrito} from './Paginas/index'
-import {Routes, Route} from 'react-router-dom'
+import {Routes, Route, Link} from 'react-router-dom'
 import { Toaster } from 'react-hot-toast';
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
     <div className='bg-slate-500 flex items-center'>
    
       <div className='px-10 container m-auto'>
-      
+      <Link to='/' className="text-black-100 block">Go to home</Link>
       <Routes>
         <Route path='/' element={<Aterrizaje/>}></Route>
         <Route path='/login' element={<Login/>}></Route>

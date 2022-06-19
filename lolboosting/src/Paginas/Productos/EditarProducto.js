@@ -73,7 +73,7 @@ export default function EditarProducto() {
         if(values.precio===0 || values.precio<=0){
           toast.error("No podemos vender un producto y que sea gratis o que tenga un valor negativo")
         }else{
-          axios.put("/productos",values,{ headers: {"x-access-token" : `${localStorage.getItem("TokenUsuario")}`} })
+          axios.put(`/productos/${values._id}`,values,{ headers: {"x-access-token" : `${localStorage.getItem("TokenUsuario")}`} })
         .then(res =>{
           console.log(res)
           if(res.status===200){
@@ -89,10 +89,10 @@ export default function EditarProducto() {
               navigate("/login")
           }else if(error.response.status===404){
             toast.error("No se ha encontrado")
-            navigate("/coachings")
+            navigate("/productos")
           }else{
             toast.error("Hubo un error y no se ha encontrado ninguna publicacion con este id")
-            navigate("/coachings")
+            navigate("/productos")
           }
       })
         }

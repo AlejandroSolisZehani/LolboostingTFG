@@ -84,8 +84,8 @@ function ModificarCuenta() {
              <Form onSubmit={handleSubmit}>
               <label> Email verificado</label>
              <Field name="email_verificado" placeholder="email_verificado" component="select">
-               <option value="True">True</option>
-               <option value="Flase">False</option>
+               <option value="true">True</option>
+               <option value="false">False</option>
               </Field>
               <br/>
               <br></br>
