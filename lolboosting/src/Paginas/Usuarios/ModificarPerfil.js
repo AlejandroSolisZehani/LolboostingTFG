@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import * as Yup from 'yup'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import toast from 'react-hot-toast'
 import { Formik,Form, Field, ErrorMessage, enableReinitialize } from 'formik'
 function ModificarPerfil() {
@@ -17,8 +18,9 @@ function ModificarPerfil() {
         .catch(error => console.log(error))
     }},[])
   return (
-    <>
+    <><div><div className='text-2xl text-white'><Link to='/'>Lolboosting</Link>/<Link to='/miperfil'>Mi Perfil</Link>/Editar Perfil</div>
     <div className='divBox flex items-center justify-center text-white mb-10'>
+    
         <Formik
         initialValues={usuario}
           validationSchema={Yup.object({
@@ -80,7 +82,7 @@ function ModificarPerfil() {
           </Form>
       )}
         </Formik>
-    </div>
+    </div></div>
     </>
   )
 }

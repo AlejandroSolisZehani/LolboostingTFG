@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 import toast from 'react-hot-toast'
 import TarjetaDashboard from '../../Componentes/Admins/TarjetaDashboard'
 export default function Dashboard() {
@@ -39,8 +40,11 @@ export default function Dashboard() {
         navigate("/")
     }
   return (
+    <div>
+        <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link><Link to='/admin'>/Admin</Link></div>
     <div className='bg-slate-500 text-slate-50'>
         <TarjetaDashboard Usuario={Usuario}/>
+    </div>
     </div>
   )
 }

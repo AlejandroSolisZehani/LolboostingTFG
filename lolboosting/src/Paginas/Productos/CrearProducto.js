@@ -3,6 +3,7 @@ import axios from 'axios'
 import * as Yup from 'yup'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import toast from 'react-hot-toast'
 
 function CrearProducto() {
@@ -39,6 +40,9 @@ function CrearProducto() {
     navigate("/")
   }
     return (
+      <div>
+        <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link>/<Link to='/productos'>Productos</Link></div>
+      
       <div className='divBox flex items-center justify-center text-white mb-10'>
         <Formik
         initialValues={{
@@ -107,7 +111,7 @@ function CrearProducto() {
           )}
            
         </Formik>
-      </div>
+      </div></div>
     )
   
   

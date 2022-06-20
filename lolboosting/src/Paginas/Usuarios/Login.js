@@ -13,7 +13,9 @@ export default function Login() {
   }, []); 
 
   return (
+    <div><div className='text-2xl text-white'><Link to='/'>Lolboosting</Link>/<Link to='/login'>Iniciar Sesion</Link></div>
     <div className='divBox flex items-center justify-center'>
+      
       <Formik
       initialValues={{
         email_usuario: '',
@@ -74,6 +76,6 @@ export default function Login() {
           </Form>
       )}
       </Formik>
-    </div>
+    </div></div>
   )
 }

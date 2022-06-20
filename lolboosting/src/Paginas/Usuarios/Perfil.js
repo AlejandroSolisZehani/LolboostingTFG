@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import toast from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 import { PerfilUsuario } from '../../Componentes/Usuarios/PerfilUsuario'
 export default function Perfil() {
@@ -26,6 +27,7 @@ export default function Perfil() {
   }},[])
   return (
   <div className='bg-slate-500 text-slate-50'>
+    <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link>/<Link to='/miperfil'>Mi Perfil</Link></div>
      <PerfilUsuario Perfil={usuario}/>
   </div>
   )

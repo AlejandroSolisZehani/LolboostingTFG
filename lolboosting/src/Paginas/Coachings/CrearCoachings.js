@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 import * as Yup from 'yup'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import { useNavigate } from 'react-router-dom'
@@ -17,6 +18,8 @@ function CrearCoachings() {
   },[])
   
   return (
+    <div>
+      <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link><Link to='/coachings'>/Coachings</Link>/CrearCoach</div>
     <div className='divBox flex items-center justify-center text-white mb-10'>
         <Formik
           initialValues={{
@@ -235,7 +238,7 @@ function CrearCoachings() {
           )}
            
         </Formik>
-    </div>
+    </div></div>
     
   )
 }

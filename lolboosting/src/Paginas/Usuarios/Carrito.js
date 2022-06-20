@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import CarritoComponente from './CarritoComponente'
 import toast from 'react-hot-toast'
+import { Link } from 'react-router-dom'
 function Carrito() {
     const navigate = useNavigate()
     const [carrito, setCarrito] = useState([])
@@ -14,10 +15,13 @@ function Carrito() {
     },[])
 
   if(localStorage.getItem("Carrito")==0 || localStorage.getItem("Carrito")==null){
-    return <div> Todavia no hay nada en el carrito</div>
+    return <div> 
+        <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link>/<Link to='/carrito'>Carrito</Link></div>
+        Todavia no hay nada en el carrito</div>
   }else{
     return <>
         <div className='container'> 
+        <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link>/<Link to='/carrito'>Carrito</Link></div>
         {carrito.map(Carrito=>(
             <div className='grid grid-cols-1'>
             <CarritoComponente Valor={Carrito} key={Carrito._id}/>

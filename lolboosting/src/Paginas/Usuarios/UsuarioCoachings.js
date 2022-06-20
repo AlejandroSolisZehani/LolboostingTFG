@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 import toast from 'react-hot-toast'
 import TarjetaUsuariosCoachings from '../../Componentes/Usuarios/TarjetaUsuariosCoachings'
@@ -38,6 +39,7 @@ export default function UsuarioCoachings() {
   console.log(Coachcontratado)
   return (
     <div className='container'>
+        <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link>/<Link to='/miperfil'>Mi Perfil</Link>/Coachings</div>
         <h1 className='flex justify-center text-white text-3xl mb-3 mt-3'>Coachs contratados</h1>
         <div className='grid grid-cols-1 gap-10'>
             {Coach.filter(coach=> coach.id_cliente===localStorage.getItem("IdUsuario")).map(coach=>(

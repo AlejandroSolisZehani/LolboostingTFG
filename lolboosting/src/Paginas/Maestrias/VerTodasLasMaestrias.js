@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import toast from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import TarjetaMaestrias from '../../Componentes/Maestrias/TarjetaMaestrias'
 export default function VerTodasLasMaestrias() {
     const navigate= useNavigate()
@@ -30,6 +31,7 @@ export default function VerTodasLasMaestrias() {
       const [Maestria, setMaestria] = useState([])
       if(Maestria.length===0){
         return <div >
+            <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link>/Maestrias</div>
             <div>No hay solicitudes de Boost de Maestrias por el momento</div>
             <br></br>
             <div className='flex justify-center px-12 py-12 text-3xl mx-4 my-4 h-24'>
@@ -39,6 +41,7 @@ export default function VerTodasLasMaestrias() {
         </div>
       }else{
         return <div>
+            <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link>/Maestrias</div>
             <div className='flex justify-center px-12 py-12 text-3xl mx-4 my-4 h-24'>
             <div className="mb-30 text-white">
             <button className='bg-orange-500 mb-10' onClick={()=>{navigate("/maestria")}}>Solicitar Maestria</button><br></br>

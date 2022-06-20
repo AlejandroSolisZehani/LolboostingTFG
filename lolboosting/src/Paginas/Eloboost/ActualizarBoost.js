@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import * as Yup from 'yup'
+import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import toast from 'react-hot-toast'
 import { useParams } from 'react-router-dom'
@@ -32,9 +33,14 @@ function ActualizarBoost() {
     }
     },[])
     if(Boost.length===0){
-        return <div>No se ha encontrado la peticion de Boost</div>
+        return <div>
+          <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link><Link to='/boost'>/Eloboost</Link>/EditarBoost</div>
+          No se ha encontrado la peticion de Boost</div>
     }else{
-        return <div className='divBox flex items-center justify-center text-white mb-10'>
+        return <div>
+          <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link><Link to='/boost'>/Eloboost</Link>/EditarBoost</div>
+        
+        <div className='divBox flex items-center justify-center text-white mb-10'>
                 <Formik
                 initialValues={Boost}
                 validationSchema={Yup.object({
@@ -98,7 +104,7 @@ function ActualizarBoost() {
                  </Form>
                   )}
                 </Formik>
-            </div>
+            </div></div>
           
     }
 }

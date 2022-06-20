@@ -4,7 +4,7 @@ import * as Yup from 'yup'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import { useNavigate } from 'react-router-dom'
 import toast from 'react-hot-toast'
-
+import { Link } from 'react-router-dom'
 function CrearSolicitud() {
     useEffect(()=>{
         if(localStorage.getItem("IdUsuario")==null||localStorage.getItem("TokenUsuario")==null){
@@ -16,6 +16,8 @@ function CrearSolicitud() {
     "Platino3","Platino2","Platino1","Diamante4","Diamante3","Diamante2","Diamante1","Maestro","GranMaestro","Aspirante"]
     const roles = ["Top","Jungler","Mid","Adc","Support"]
   return (
+    <div>
+      <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link><Link to='/boost'>/Eloboost</Link>/SolicitarBoost</div>
     <div className='divBox flex items-center justify-center text-white mb-10'>
         <Formik
         initialValues={{
@@ -335,7 +337,7 @@ function CrearSolicitud() {
          </Form>
           )}
         </Formik>
-    </div>
+    </div></div>
   )
 }
 

@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { Tarjetavercuentas } from "../../Componentes/Cuentas/Tarjetavercuentas"
 import toast from "react-hot-toast"
 function Vercuentas() {
@@ -25,13 +26,17 @@ function Vercuentas() {
     
 
   if(cuentas.filter(cuenta=> cuenta.activo===true).length===0){
-    return <div className='flex justify-center'>
+    return <div>
+      <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link><Link to='/cuentas'>/Cuentas</Link></div>
+<div className='flex justify-center'>
       <div>No hay cuentas todavia</div>
       <br></br>
       <div className='flex justify-center px-12 py-12 text-3xl mx-4 my-4 h-24'><button className='bg-orange-500 ' onClick={()=>{navigate("/vendercuenta")}}>Vender Cuenta</button></div>
     </div>
+    </div>
   }else{
     return <div>
+      <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link><Link to='/cuentas'>/Cuentas</Link></div>
       <div className='flex justify-center px-12 py-12 text-3xl mx-4 my-4 h-24'>
         <div className="mb-20 text-white">
       <button className='bg-orange-500 mb-20' onClick={()=>{navigate("/vendercuenta")}}>Vender Cuenta</button><br></br>

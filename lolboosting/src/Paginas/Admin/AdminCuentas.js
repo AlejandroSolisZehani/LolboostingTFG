@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import toast from 'react-hot-toast'
 import TarjetasCuentas from '../../Componentes/Admins/TarjetasCuentas'
@@ -61,13 +62,14 @@ function AdminCuentas() {
         })
     },[Cuenta])
   return (
-    
+        <div>
+            <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link><Link to='/admin'>/Admin</Link>/Cuentas</div>
         <div className='mb-10 gap-10 grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2'>
             {Cuenta.map(Cuenta=>(
                 <TarjetasCuentas Cuentas={Cuenta} key={Cuenta._id}/>
             ))}
     
-        </div>
+        </div></div>
   )
 }
 

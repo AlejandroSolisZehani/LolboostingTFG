@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 import toast from 'react-hot-toast'
+import { Link } from 'react-router-dom'
 
 import { useNavigate } from 'react-router-dom'
 function PasarSaldo() {
@@ -21,7 +22,10 @@ function PasarSaldo() {
         }
     },[])
   return (
+    <div>
+        <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link>/<Link to='/miperfil'>Mi Perfil</Link>/Transferir Saldo</div>
     <div className='mt-40 mb-40 text-white'>
+        
         <div className='flex justify-center mt-5 mb-5'>
         <h1 className='text-3xl'>Pasar saldo disponible a Cuenta</h1>
         </div>
@@ -30,7 +34,7 @@ function PasarSaldo() {
         </div>
         
     <div className='flex justify-center mt-5 mb-5'>
-        <button className='bg-orange-500 hover:bg-orange-500 text-3xl' onClick={()=>{
+        <button className='bg-red-500 hover:bg-red-500 text-3xl' onClick={()=>{
             toast((t) =>(
                 <div className='text-xl text-white'>
                     <p>Seguro que desea Transferir saldo?</p>
@@ -68,6 +72,7 @@ function PasarSaldo() {
         <div className='flex justify-center mt-5 mb-5'>
         <button  className='bg-slate-400 hover:bg-slate-500 text-3xl' onClick={()=>{navigate("/miperfil")}}>Volver a mi perfil</button>
         </div>
+    </div>
     </div>
   )
 }

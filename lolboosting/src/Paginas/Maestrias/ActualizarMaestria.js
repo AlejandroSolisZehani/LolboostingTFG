@@ -4,6 +4,7 @@ import axios from 'axios'
 import * as Yup from 'yup'
 import { useNavigate } from 'react-router-dom'
 import toast from 'react-hot-toast'
+import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import { Formik,Form, Field, ErrorMessage, enableReinitialize } from 'formik'
 
@@ -31,9 +32,15 @@ function ActualizarMaestria() {
         }
         },[])
     if(Maestria.activo===false){
-        return <div>No se ha encontrado la Maestria</div>
+        
+        return <div>
+            <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link>/<Link to='/maestrias'>/Maestrias</Link>/EditarMaestria</div>
+            No se ha encontrado la Maestria</div>
     }
-    return <div className='divBox flex items-center justify-center text-white mb-10'>
+    return <div>
+        <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link>/<Link to='/maestrias'>/Maestrias</Link>/EditarMaestria</div>
+    
+    <div className='divBox flex items-center justify-center text-white mb-10'>
         <Formik
         initialValues={Maestria}
         validationSchema={Yup.object({
@@ -82,7 +89,7 @@ function ActualizarMaestria() {
             </Form>
         )}
         </Formik>
-    </div>
+    </div></div>
 }
 
 export default ActualizarMaestria

@@ -55,15 +55,16 @@ function TarjetaProducto({Producto}) {
       <div className='bg-zinc-800 text-white rounded-sm shadow-sm shadow-black
       hover:bg-zinc-700 hover:cursor-pointer'>
         <div>
-          <p className='flex justify-center'>{Producto._id}</p>
-          <h1 className='flex justify-center'>{Producto.titulo}</h1>
+          <p className='flex justify-center text-2xl'>{Producto.titulo}</p>
+          <h1 className='flex justify-center'>Descripcion:</h1>
+          <p className='flex justify-center'>{Producto.detalles}</p>
           <div className='flex justify-center '>
           <img src={Producto.imagenes} alt='Imagen del producto' className='w-96'/>
           </div>
           
           <p className='flex justify-center'>{Producto.precio}€</p>
           <div className='flex justify-center '>
-          <button className='flex justify-center bg-orange-600 text-xl px-2 py-1 rounded-sm' onClick={()=>{
+          <button className='flex justify-center bg-indigo-600 text-xl px-2 py-1 rounded-sm' onClick={()=>{
             navigate(`/editarproducto/${Producto._id}`)
           }}>Editar</button>
           </div>

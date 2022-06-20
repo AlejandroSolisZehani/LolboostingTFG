@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import * as Yup from 'yup'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import toast from 'react-hot-toast'
 import { useParams } from 'react-router-dom'
 import { Formik,Form, Field, ErrorMessage, enableReinitialize } from 'formik'
@@ -30,12 +31,14 @@ function ModificarCuenta() {
         
     },[])
     if(cuenta.length===0){
-        return <div className='Cuenta bg-red'>
+        return <div><div className='text-2xl text-white'><Link to='/'>Lolboosting</Link><Link to='/cuentas'>/Cuentas</Link>/EditarCuenta</div><div className='Cuenta bg-red'>
         No se ha encontrado la cuenta
+    </div>
     </div>
         
     }else{
-      return <div className='divBox flex items-center justify-center text-white mb-10'>
+      return <div><div className='text-2xl text-white'><Link to='/'>Lolboosting</Link><Link to='/cuentas'>/Cuentas</Link>/EditarCuenta</div>
+      <div className='divBox flex items-center justify-center text-white mb-10'>
       <Formik
       initialValues={cuenta}
       validationSchema={Yup.object({
@@ -102,7 +105,7 @@ function ModificarCuenta() {
          </Form>
           )}
       </Formik>
-  </div>
+  </div></div>
     }
 }
 

@@ -55,9 +55,7 @@ function App() {
     </div>
 
     <div className='bg-slate-500 flex items-center'>
-   
       <div className='px-10 container m-auto'>
-      <Link to='/' className="text-black-100 block">Go to home</Link>
       <React.StrictMode>
       <Routes>
         <Route path='/' element={<Aterrizaje/>}></Route>

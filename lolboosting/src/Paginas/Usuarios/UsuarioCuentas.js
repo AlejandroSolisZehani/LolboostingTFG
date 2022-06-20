@@ -3,6 +3,7 @@ import  { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import toast from 'react-hot-toast'
 import TarjetaUsuariosCuentas from '../../Componentes/Usuarios/TarjetaUsuariosCuentas'
 export default function UsuarioCuentas() {
@@ -39,6 +40,7 @@ export default function UsuarioCuentas() {
   console.log(CuentasCompradas)
   return (
     <div className='container'>
+        <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link>/<Link to='/miperfil'>Mi Perfil</Link>/Cuentas</div>
         <h1 className='flex justify-center text-white text-3xl mb-3 mt-3'>Cuentas Compradas</h1>
         <div className='grid grid-cols-1 gap-10'>
             {Cuenta.filter(Cuenta=> Cuenta.id_comprador===localStorage.getItem("IdUsuario")).map(Cuenta=>(

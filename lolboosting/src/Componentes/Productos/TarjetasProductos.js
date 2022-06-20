@@ -8,7 +8,7 @@ function TarjetasProductos({Productos}) {
     <div className='bg-zinc-800 text-white rounded-sm shadow-sm shadow-black
     hover:bg-zinc-700 hover:cursor-pointer'>
     <div className='px-4 py-7'>
-      <div className='flex justify-center'>
+      <div className='flex justify-center text-2xl'>
       <h4>{Productos.titulo}</h4>
       
       </div>

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 import * as Yup from 'yup'
 import { useNavigate } from 'react-router-dom'
 import toast from 'react-hot-toast'
@@ -41,6 +42,8 @@ export default function EditarCoach() {
     
   },[])
   return (
+    <div>
+      <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link><Link to='/coachings'>/Coachings</Link>/EditarCoach</div>
     <div className='divBox flex items-center justify-center text-white mb-10'>
       <Formik
       initialValues={Coach}
@@ -111,6 +114,6 @@ export default function EditarCoach() {
           )}
            
         </Formik>
-    </div>
+    </div></div>
   )
 }

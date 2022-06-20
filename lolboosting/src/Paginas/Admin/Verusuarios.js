@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import toast from 'react-hot-toast'
 import TarjetasUsuarios from '../../Componentes/Admins/TarjetasUsuarios'
 function Verusuarios() {
@@ -61,13 +62,14 @@ function Verusuarios() {
         })
     },[Usuarios])
   return (
-    
+        <div>
+            <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link><Link to='/admin'>/Admin</Link>/Usuarios</div>
         <div className='mb-10 gap-10 grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2'>
             {Usuarios.map(Usuario=>(
                 <TarjetasUsuarios Users={Usuario} key={Usuario._id}/>
             ))}
     
-        </div>
+        </div></div>
   )
 }
 

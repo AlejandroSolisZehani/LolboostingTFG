@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 import * as Yup from 'yup'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import { useNavigate } from 'react-router-dom'
@@ -14,6 +15,7 @@ function CrearCuenta() {
     const rangos = ["Hierro4","Hierro3","Hierro2","Hierro1","Bronce4","Bronce3","Bronce2","Bronce1","Plata4","Plata3","Plata2","Plata1","Oro4","Oro3","Oro2","Oro1","Platino4",
     "Platino3","Platino2","Platino1","Diamante4","Diamante3","Diamante2","Diamante1","Maestro","GranMaestro","Aspirante","Sinrango"]
   return (
+    <div><div className='text-2xl text-white'><Link to='/'>Lolboosting</Link><Link to='/cuentas'>/Cuentas</Link>/CrearCuenta</div>
     <div className='divBox flex items-center justify-center text-white mb-10'>
         <Formik
           initialValues={{
@@ -383,7 +385,7 @@ function CrearCuenta() {
           )}
            
         </Formik>
-    </div>
+    </div></div>
     
   )
 }

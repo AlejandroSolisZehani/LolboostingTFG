@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import toast from 'react-hot-toast'
+import { Link } from 'react-router-dom'
 import TarjetasCoachings from '../../Componentes/Admins/TarjetasCoachings'
 
 function Admincoachings() {
@@ -62,13 +63,14 @@ function Admincoachings() {
       })
   },[Coachings])
 return (
-  
+        <div>
+            <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link><Link to='/admin'>/Admin</Link>/Coachings</div>
       <div className='mb-10 gap-10 grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2'>
           {Coachings.map(Coach=>(
               <TarjetasCoachings Coach={Coach} key={Coach._id}/>
           ))}
   
-      </div>
+      </div></div>
 )
 }
 

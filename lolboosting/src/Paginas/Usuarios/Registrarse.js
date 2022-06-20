@@ -2,6 +2,7 @@ import React, {useEffect}from 'react'
 import axios from 'axios'
 import * as Yup from 'yup'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import toast from 'react-hot-toast'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 function Registrarse() {
@@ -11,8 +12,9 @@ function Registrarse() {
       navigate("/")
     }
   }, []); 
-  return (
+  return (<div><div className='text-2xl text-white'><Link to='/'>Lolboosting</Link>/<Link to='/signup'>Registrarse</Link></div>
     <div className='divBox flex items-center justify-center text-white'>
+      
       <Formik
       initialValues={{
         email_usuario: '',
@@ -86,7 +88,7 @@ function Registrarse() {
           </Form>
       )}
       </Formik>
-    </div>
+    </div></div>
   )
 }
 export default Registrarse

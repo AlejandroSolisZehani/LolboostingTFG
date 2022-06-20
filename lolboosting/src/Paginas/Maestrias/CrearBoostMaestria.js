@@ -2,6 +2,7 @@ import React, {useEffect}from 'react'
 import axios from 'axios'
 import * as Yup from 'yup'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
+import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import toast from 'react-hot-toast'
 
@@ -13,6 +14,9 @@ function CrearBoostMaestria() {
     }
   },[])
   return (
+    <div>
+       <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link>/<Link to='/maestrias'>/Maestrias</Link>/SolicitarMaestria</div>
+    
     <div className='divBox flex items-center justify-center text-white mb-10'>
         <Formik
           initialValues={{
@@ -114,7 +118,7 @@ function CrearBoostMaestria() {
           )}
            
         </Formik>
-    </div>
+    </div></div>
     
   )
 }

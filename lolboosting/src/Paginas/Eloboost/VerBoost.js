@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 import toast from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
@@ -30,15 +31,21 @@ export function VerBoost() {
       },[])
       const [Boost, setBoost] = useState([])
       if(Boost.length===0){
-        return <div>No hay solicitudes de Boost todavia</div>
+        return <div>
+          <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link>/<Link to='/boost'>Eloboost</Link>/Boost</div>
+          No hay solicitudes de Boost todavia</div>
       }else if(Boost.activo===false){
 
-        return <div>Esta solicitud de boost de Maestria ya no esta activa</div>
+        return <div>
+          <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link><Link to='/boost'>Eloboost</Link>/Boost</div>
+          Esta solicitud de boost de Maestria ya no esta activa</div>
       }
       else{
-        return <div className='grid grid-cols-1 gap-10 mb-10'>
+        return <div>
+          <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link><Link to='/boost'>Eloboost</Link>/Boost</div>
+          <div className='grid grid-cols-1 gap-10 mb-10'>
             <TarjetaBoost Boost={Boost} key={Boost._id}/>
-    </div>
+    </div></div>
 }
 }
 
