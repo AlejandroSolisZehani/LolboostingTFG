@@ -43,7 +43,7 @@ function ActualizarMaestria() {
     }
     onSubmit={(values, actions) =>{
         console.log(values)
-        if(localStorage.getItem("IdUsuario")!==Maestria.id_vendedor){
+        if(localStorage.getItem("IdUsuario")!==Maestria.id_cliente){
             toast.error("No puedes editar esto")
             navigate("/maestrias")
         }else{

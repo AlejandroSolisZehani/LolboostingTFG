@@ -81,7 +81,7 @@ export function PerfilUsuario({Perfil}) {
     
   }
   console.log(Usuario)
-  if(Usuario.roles=="Usuario"){
+  if(Perfil.roles=="Usuario"){
     return (
       <>
       <div className='flex justify-center mb-6 mt-3 text-light-200'>

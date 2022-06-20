@@ -31,7 +31,7 @@ export default function VerTodasLasMaestrias() {
       if(Maestria.length===0){
         return <div>No hay solicitudes de Boost todavia</div>
       }else{
-        return <div className='grid grid-cols-3 gap-3'>
+        return <div className='grid grid-cols-1 gap-10'>
         {Maestria.filter(Maestria=> Maestria.activo===true).map(Maestria=>(
             <TarjetaMaestrias Maestria={Maestria} key={Maestria._id}/>
         ))}
