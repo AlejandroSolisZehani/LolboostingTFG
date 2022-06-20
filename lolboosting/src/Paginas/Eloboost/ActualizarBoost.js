@@ -34,7 +34,7 @@ function ActualizarBoost() {
     if(Boost.length===0){
         return <div>No se ha encontrado la peticion de Boost</div>
     }else{
-        return <div>
+        return <div className='divBox flex items-center justify-center text-white mb-10'>
                 <Formik
                 initialValues={Boost}
                 validationSchema={Yup.object({
@@ -50,7 +50,7 @@ function ActualizarBoost() {
                 axios.put(`/eloboosts/${params.id}`,values,{ headers: {"x-access-token" : `${localStorage.getItem("TokenUsuario")}`} })
                 .then(res => {console.log(res.status);
                 if(res.status===200){
-                    toast.success("Subida de cuenta Correcta",{duration:2500})
+                    toast.success("Actualización de Boost Correcta",{duration:2500})
                     navigate('/boost')
                     }else{
                         toast.error("Algo salio mal")
@@ -75,7 +75,7 @@ function ActualizarBoost() {
                      <Form onSubmit={handleSubmit}>
                       
                       <label>Rol Preferido</label><br></br>
-                     <Field component="select" name="rol_preferido" >
+                     <Field component="select" name="rol_preferido" className='text-black'>
                        <option defaultValue="Seleccioneunaopcion">Seleciona una opcion</option>
                         <option value="Top">Toplane</option>
                         <option value="Jungler">Jungla</option>
@@ -86,15 +86,15 @@ function ActualizarBoost() {
                       </Field><br/>
                       <ErrorMessage name='rol_preferido' className='text-red-900' component="p"></ErrorMessage><br/>
                       <label>Nombre de la cuenta</label><br/>
-                      <Field name="nombre_cuenta"></Field><br/>
+                      <Field name="nombre_cuenta" className='text-black' placeholder='Nombre Cuenta'></Field><br/>
                       <ErrorMessage name='nombre_cuenta' className='text-red-900' component="p"></ErrorMessage><br/>
                       <label>Contraseña de la cuenta</label><br/>
-                      <Field name="passwd_cuenta"></Field><br/>
+                      <Field name="passwd_cuenta" className='text-black'></Field><br/>
                       <ErrorMessage name='passwd_cuenta' className='text-red-900' component="p"></ErrorMessage><br/>
                       <label>Campeon / Campeones Preferidos</label><br/>
-                      <Field name="campeon_preferido"></Field><br/>
+                      <Field name="campeon_preferido" className='text-black' placeholder='Skarner'></Field><br/>
                       <ErrorMessage name='campeon_preferido' className='text-red-900' component="p"></ErrorMessage><br/>
-                     <button type='submit'>Actualizar Cuenta</button>
+                     <button type='submit' className='bg-indigo-600 hover:bg-indigo-500 text-3xl mt-10 mb-10'>Actualizar Boost</button>
                  </Form>
                   )}
                 </Formik>

@@ -14,7 +14,7 @@ function CrearCuenta() {
     const rangos = ["Hierro4","Hierro3","Hierro2","Hierro1","Bronce4","Bronce3","Bronce2","Bronce1","Plata4","Plata3","Plata2","Plata1","Oro4","Oro3","Oro2","Oro1","Platino4",
     "Platino3","Platino2","Platino1","Diamante4","Diamante3","Diamante2","Diamante1","Maestro","GranMaestro","Aspirante","Sinrango"]
   return (
-    <div>
+    <div className='divBox flex items-center justify-center text-white mb-10'>
         <Formik
           initialValues={{
             titulo: '',
@@ -182,7 +182,7 @@ function CrearCuenta() {
               precio += 5
             }
             precio += numerorangoinicial*2/2
-            precio += numerorangoinicial*2
+            precio += numerorangofinal*2
 
             values.precio=precio
             console.log(values)
@@ -247,14 +247,14 @@ function CrearCuenta() {
           {({handleSubmit}) =>(
              <Form onSubmit={handleSubmit}>
               <label>Campeones</label><br></br>
-             <Field name="campeones" placeholder="campeones"/>
-             <ErrorMessage name='campeones'></ErrorMessage>
+             <Field name="campeones" placeholder="campeones"  className='text-black'/>
+             <ErrorMessage name='campeones' className='text-red-900' component="p"></ErrorMessage>
              <br/>
              <label>Aspectos</label><br></br>
-             <Field name="aspectos" placeholder="aspectos"/><br/>
-             <ErrorMessage name='aspectos'></ErrorMessage><br></br>
+             <Field name="aspectos" placeholder="aspectos"  className='text-black'/><br/>
+             <ErrorMessage name='aspectos' className='text-red-900' component="p"></ErrorMessage><br></br>
              <label>Rando temporada pasada</label><br></br>
-             <Field component="select" name="rango_temporada_pasada" placeholder="rango_temporada_pasada">
+             <Field component="select" name="rango_temporada_pasada" className='text-black'>
                <option defaultValue="Seleccioneunaopcion">Seleciona una opcion</option>
                <option value="Sinrango">Sin rango</option>
                <optgroup label='Hierro'>
@@ -303,9 +303,9 @@ function CrearCuenta() {
               <option value="Aspirante">Aspirante</option>
               </optgroup>
               </Field><br/>
-              <ErrorMessage name='rango_temporada_pasada'></ErrorMessage><br/>
+              <ErrorMessage name='rango_temporada_pasada' className='text-red-900' component="p"></ErrorMessage><br/>
               <label>Rango temporada Actual</label><br></br>
-              <Field component="select" name="rango_temporada_actual">
+              <Field component="select" name="rango_temporada_actual" className='text-black'>
                <option value="Sinrango">Sin rango</option>
                <optgroup label='Hierro'>
                 <option value="Hierro4">Hierro 4</option> 
@@ -353,32 +353,32 @@ function CrearCuenta() {
               <option value="Aspirante">Aspirante</option>
               </optgroup>
               </Field><br/>
-              <ErrorMessage name='rango_temporada_actual'></ErrorMessage><br/>
+              <ErrorMessage name='rango_temporada_actual' className='text-red-900' component="p"></ErrorMessage><br/>
               <label> Email verificado</label>
-             <Field name="email_verificado" placeholder="email_verificado" component="select">
+             <Field name="email_verificado" placeholder="email_verificado" component="select"  className='text-black'>
                <option value="True">True</option>
                <option value="False">False</option>
               </Field>
               <br/>
               <label>Nivel de la cuenta</label><br></br>
-             <Field name="nivel_cuenta" placeholder="nivel_cuenta"/><br/>
-             <ErrorMessage name='nivel_cuenta'></ErrorMessage><br/>
+             <Field name="nivel_cuenta" placeholder="nivel_cuenta" className='text-black'/><br/>
+             <ErrorMessage name='nivel_cuenta' className='text-red-900' component="p"></ErrorMessage><br/>
              <label>Riot points</label><br></br>
-             <Field name="riot_points" placeholder="riot_points"/><br/>
-             <ErrorMessage name='riot_points'></ErrorMessage><br></br>
+             <Field name="riot_points" placeholder="riot_points" className='text-black' /><br/>
+             <ErrorMessage name='riot_points' className='text-red-900' component="p"></ErrorMessage><br></br>
              <label>Esencia Azul</label><br></br>
-             <Field name="esencia_azul" placeholder="esencia_azul"/><br/>
-             <ErrorMessage name='esencial_azul'></ErrorMessage><br></br>
+             <Field name="esencia_azul" placeholder="esencia_azul" className='text-black'/><br/>
+             <ErrorMessage name='esencial_azul' className='text-red-900' component="p"></ErrorMessage><br></br>
              <label>Correo Cuenta</label><br></br>
-             <Field name="correo_cuenta" placeholder="correo_cuenta"/><br/>
-             <ErrorMessage name='correo_cuenta'></ErrorMessage><br></br>
+             <Field name="correo_cuenta" placeholder="correo_cuenta" className='text-black'/><br/>
+             <ErrorMessage name='correo_cuenta' className='text-red-900' component="p"></ErrorMessage><br></br>
              <label>Contraseña Cuenta</label><br></br>
-             <Field name="contraseña_cuenta" placeholder="contraseña_cuenta" type="password"/><br/>
-             <ErrorMessage name='contraseña_cuenta'></ErrorMessage><br></br>
+             <Field name="contraseña_cuenta" placeholder="contraseña_cuenta" type="password" className='text-black'/><br/>
+             <ErrorMessage name='contraseña_cuenta' className='text-red-900' component="p"></ErrorMessage><br></br>
              <label>Nombre Invocador</label><br></br>
-             <Field name="nombre_invocador" placeholder="nombre_invocador"/><br/>
-             <ErrorMessage name='nombre_invocador'></ErrorMessage><br></br>
-             <button type='submit'>Subir Cuenta</button>
+             <Field name="nombre_invocador" placeholder="nombre_invocador" className='text-black'/><br/>
+             <ErrorMessage name='nombre_invocador' className='text-red-900' component="p"></ErrorMessage><br></br>
+             <button type='submit' className='bg-indigo-600 hover:bg-indigo-500 text-3xl mt-10 mb-10'>Subir Cuenta</button>
          </Form>
           )}
            

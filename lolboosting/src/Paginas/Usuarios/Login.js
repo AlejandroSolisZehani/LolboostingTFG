@@ -59,7 +59,7 @@ export default function Login() {
             </div>
            
             <div className='mt-10 text-black'>
-            <label>Contraseña Usuario</label><br></br>
+            <label className='text-white'>Contraseña Usuario</label><br></br>
             <Field name="contraseña_usuario" type="password"/><br></br>
             <ErrorMessage name='contraseña_usuario' className='text-red-900' component="p"/>
             </div>

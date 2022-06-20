@@ -35,7 +35,7 @@ function ModificarCuenta() {
     </div>
         
     }else{
-      return <div className='Cuenta'>
+      return <div className='divBox flex items-center justify-center text-white mb-10'>
       <Formik
       initialValues={cuenta}
       validationSchema={Yup.object({
@@ -54,7 +54,7 @@ function ModificarCuenta() {
           axios.put(`/cuentas/${params.id}`,values,{ headers: {"x-access-token" : `${token}`} })
         .then(res => {console.log(res.status);
         if(res.status===200){
-          toast.success("Subida de cuenta Correcta",{duration:2500})
+          toast.success("Antualizacion de cuenta Correcta",{duration:2500})
           navigate('/cuentas')
         }else{
           toast.error("Algo salio mal")
@@ -83,22 +83,22 @@ function ModificarCuenta() {
         {({handleSubmit}) =>(
              <Form onSubmit={handleSubmit}>
               <label> Email verificado</label>
-             <Field name="email_verificado" placeholder="email_verificado" component="select">
+             <Field name="email_verificado" placeholder="email_verificado" component="select" className='text-black'>
                <option value="true">True</option>
                <option value="false">False</option>
               </Field>
               <br/>
               <br></br>
               <label>Correo de la cuenta</label><br></br>
-             <Field name="correo_cuenta" placeholder="correo_cuenta"/><br/>
-             <ErrorMessage name="correo_cuenta"></ErrorMessage><br></br>
+             <Field name="correo_cuenta" placeholder="correo_cuenta" className='text-black'/><br/>
+             <ErrorMessage name="correo_cuenta"  className='text-red-900' component="p"></ErrorMessage><br></br>
              <label>Contraseña Cuenta</label><br></br>
-             <Field name="contraseña_cuenta" type="password"/><br/>
-             <ErrorMessage name='contraseña_cuenta'></ErrorMessage><br></br>
+             <Field name="contraseña_cuenta" type="password" className='text-black'/><br/>
+             <ErrorMessage name='contraseña_cuenta'  className='text-red-900' component="p"></ErrorMessage><br></br>
              <label>Nombre de invocador</label><br></br>
-             <Field name="nombre_invocador" placeholder="nombre_invocador"/><br/>
-             <ErrorMessage name='nombre_invocador'></ErrorMessage>
-             <button type='submit'>Subir Cuenta</button>
+             <Field name="nombre_invocador" placeholder="nombre_invocador" className='text-black'/><br/>
+             <ErrorMessage name='nombre_invocador'  className='text-red-900' component="p"></ErrorMessage>
+             <button type='submit' className='mt-10 mb-10 bg-indigo-600 hover:bg-indigo-500 text-3xl'>Editar Cuenta</button>
          </Form>
           )}
       </Formik>

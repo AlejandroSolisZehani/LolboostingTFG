@@ -58,7 +58,7 @@ export default function EditarProducto() {
     navigate("/")
   }
     return (
-      <div>
+      <div className='divBox flex items-center justify-center text-white mb-10'>
         <Formik
         initialValues={Producto}
         validationSchema={Yup.object({
@@ -103,18 +103,18 @@ export default function EditarProducto() {
           {({handleSubmit}) =>(
              <Form onSubmit={handleSubmit}>
               <label>Titulo</label><br></br>
-              <Field name='titulo' placeholder='Taza / Figura ...'></Field><br></br>
-              <ErrorMessage name='titulo'></ErrorMessage><br></br>
+              <Field name='titulo' placeholder='Taza / Figura ...' className='text-black'></Field><br></br>
+              <ErrorMessage name='titulo' className='text-red-900' component="p"></ErrorMessage><br></br>
               <label>Precio</label><br></br>
-              <Field name='precio' placeholder='20,35'></Field><br></br>
-              <ErrorMessage name='precio'></ErrorMessage><br></br>
+              <Field name='precio' placeholder='20,35' className='text-black'></Field><br></br>
+              <ErrorMessage name='precio' className='text-red-900' component="p"></ErrorMessage><br></br>
               <label>detalles</label><br></br>
-              <Field name='detalles' placeholder='Taza de 10cm alto x 5cm ancho'></Field><br></br>
-              <ErrorMessage name='detalles'></ErrorMessage><br></br>
+              <Field name='detalles' placeholder='Taza de 10cm alto x 5cm ancho' className='text-black'></Field><br></br>
+              <ErrorMessage name='detalles' className='text-red-900' component="p"></ErrorMessage><br></br>
               <label>Url imagen</label><br></br>
-              <Field name='imagenes' placeholder='http://imagenes/tazalol.png'></Field><br></br>
-              <ErrorMessage name='imagenes'></ErrorMessage><br></br>
-             <button type='submit'>Subir Cuenta</button>
+              <Field name='imagenes' placeholder='http://imagenes/tazalol.png' className='text-black'></Field><br></br>
+              <ErrorMessage name='imagenes' className='text-red-900' component="p"></ErrorMessage><br></br>
+             <button type='submit' className='mt-10 mb-10 bg-indigo-600 hover:bg-indigo-500 text-3xl'>Editar Producto</button>
          </Form>
           )}
            

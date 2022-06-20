@@ -21,9 +21,16 @@ function PasarSaldo() {
         }
     },[])
   return (
-
-    <div>
-        <button className='bg-orange-500 hover:bg-orange-500' onClick={()=>{
+    <div className='mt-40 mb-40 text-white'>
+        <div className='flex justify-center mt-5 mb-5'>
+        <h1 className='text-3xl'>Pasar saldo disponible a Cuenta</h1>
+        </div>
+        <div className='flex justify-center mt-5 mb-5'>
+        <p>El saldo en la cuenta solo se puede retirar, es decir no puedes comprar ni productos ni servicios con este</p>
+        </div>
+        
+    <div className='flex justify-center mt-5 mb-5'>
+        <button className='bg-orange-500 hover:bg-orange-500 text-3xl' onClick={()=>{
             toast((t) =>(
                 <div className='text-xl text-white'>
                     <p>Seguro que desea Transferir saldo?</p>
@@ -57,7 +64,10 @@ function PasarSaldo() {
                 }
             })
         }}>Transferir Saldo</button>
-        <button  className='bg-slate-400 hover:bg-slate-500' onClick={()=>{navigate("/miperfil")}}>Volver</button>
+        </div>
+        <div className='flex justify-center mt-5 mb-5'>
+        <button  className='bg-slate-400 hover:bg-slate-500 text-3xl' onClick={()=>{navigate("/miperfil")}}>Volver a mi perfil</button>
+        </div>
     </div>
   )
 }

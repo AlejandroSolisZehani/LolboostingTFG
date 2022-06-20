@@ -41,7 +41,7 @@ export default function EditarCoach() {
     
   },[])
   return (
-    <div>
+    <div className='divBox flex items-center justify-center text-white mb-10'>
       <Formik
       initialValues={Coach}
       validationSchema={Yup.object({
@@ -90,7 +90,7 @@ export default function EditarCoach() {
              <Form onSubmit={handleSubmit}>
 
               <label>Rol Preferido</label><br></br>
-              <Field component="select" name="roles_preferidos">
+              <Field component="select" name="roles_preferidos" className='text-black'>
               <option defaultValue="Sinvalor">Selecciona un valor</option>
               <option value="Top">Top</option>
               <option value="Jungler">Jungla</option>
@@ -98,15 +98,15 @@ export default function EditarCoach() {
               <option value="Adc">Tirador</option>
               <option value="Support">Soporte</option>
               </Field><br></br>
-              <ErrorMessage name='roles_preferidos'></ErrorMessage><br></br>
+              <ErrorMessage name='roles_preferidos' className='text-red-900' component="p"></ErrorMessage><br></br>
               
               <label>Idioma</label><br></br>
-              <Field name="idioma" placeholder="Español, Frances..."></Field><br></br>
-              <ErrorMessage name='idioma'></ErrorMessage><br></br>
+              <Field name="idioma" placeholder="Español, Frances..." className='text-black'></Field><br></br>
+              <ErrorMessage name='idioma' className='text-red-900' component="p"></ErrorMessage><br></br>
               <label>Correo de contacto</label><br></br>
-              <Field name="correo_coach" placeholder="Correo_contacto@gmail.com"></Field><br></br>
-              <ErrorMessage name='correo_coach'></ErrorMessage><br></br>
-             <button type='submit'>Actualizar Coach</button>
+              <Field name="correo_coach" placeholder="Correo_contacto@gmail.com" className='text-black'></Field><br></br>
+              <ErrorMessage name='correo_coach' className='text-red-900' component="p"></ErrorMessage><br></br>
+             <button type='submit' className='mt-10 mb-10 bg-indigo-600 hover:bg-indigo-500 text-3xl'>Actualizar Coach</button>
          </Form>
           )}
            

@@ -9,7 +9,7 @@ export default function TarjetasCoachs({Coachings}) {
     hover:bg-zinc-700 hover:cursor-pointer'>
     <div className='px-4 py-7'>
       <div className='flex justify-center'>
-      <h4 className='text-2xl'>{Coachings.titulo}</h4>
+      <h4 className='text-2xl'>Rango del Coach: {Coachings.titulo}</h4>
       </div>
       
       <p  className='flex justify-center'>Rol / Roles Dominante: {Coachings.roles_preferidos}</p>

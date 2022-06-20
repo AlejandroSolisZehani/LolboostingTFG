@@ -13,7 +13,7 @@ function CrearBoostMaestria() {
     }
   },[])
   return (
-    <div>
+    <div className='divBox flex items-center justify-center text-white mb-10'>
         <Formik
           initialValues={{
             titulo: '',
@@ -93,23 +93,23 @@ function CrearBoostMaestria() {
           {({handleSubmit}) =>(
              <Form onSubmit={handleSubmit}>
               <label>Nivel de Maestria Actual</label><br/>
-             <Field name="nivel_maestria_actual" placeholder="0 - 7"/><br/>
-             <ErrorMessage name='nivel_maestria_actual'></ErrorMessage>
+             <Field name="nivel_maestria_actual" placeholder="0 - 7" className='text-black'/><br/>
+             <ErrorMessage name='nivel_maestria_actual' className='text-red-900' component="p"></ErrorMessage>
              <br/>
              <label>Nivel de Maestria Deseada</label><br/>
-             <Field name="maestria_deseada" placeholder="0 - 7"/><br/>
-             <ErrorMessage name='maestria_deseada'></ErrorMessage>
+             <Field name="maestria_deseada" placeholder="0 - 7" className='text-black'/><br/>
+             <ErrorMessage name='maestria_deseada' className='text-red-900' component="p"></ErrorMessage>
              <br/>
              <label>Nombre de invocador</label><br/>
-             <Field name="nombre_cuenta" placeholder="aspectos"/><br/>
-             <ErrorMessage name='nombre_cuenta'></ErrorMessage><br></br>
+             <Field name="nombre_cuenta" placeholder="aspectos" className='text-black'/><br/>
+             <ErrorMessage name='nombre_cuenta' className='text-red-900' component="p"></ErrorMessage><br></br>
              <label>Contraseña de la cuenta</label><br/>
-             <Field name="passwd_cuenta" placeholder="aspectos" type="password"/><br/>
-             <ErrorMessage name='passwd_cuenta'></ErrorMessage><br></br>
+             <Field name="passwd_cuenta" placeholder="aspectos" type="password" className='text-black'/><br/>
+             <ErrorMessage name='passwd_cuenta' className='text-red-900' component="p"></ErrorMessage><br></br>
              <label>Nombre del Campeon</label><br/>
-             <Field name="campeon" placeholder="Zoe"/><br/>
-             <ErrorMessage name='campeon'></ErrorMessage><br></br>
-             <button type='submit'>Pagar</button>
+             <Field name="campeon" placeholder="Zoe" className='text-black'/><br/>
+             <ErrorMessage name='campeon' className='text-red-900' component="p"></ErrorMessage><br></br>
+             <button type='submit' className='bg-indigo-600 hover:bg-indigo-500 text-3xl mt-10 mb-10'>Pagar Servicio</button>
          </Form>
           )}
            

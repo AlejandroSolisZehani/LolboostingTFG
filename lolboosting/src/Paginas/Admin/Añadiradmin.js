@@ -41,7 +41,7 @@ export default function Añadiradmin() {
        
   }, []); 
   return (
-    <div>
+    <div className='divBox flex items-center justify-center text-white mb-10'>
       <Formik
       initialValues={{
         email_usuario: '',
@@ -84,30 +84,30 @@ export default function Añadiradmin() {
             <div>
             <div>
             <label>Correo Electronico</label>
-            <Field name="email_usuario" placeholder="CorreoDeEjemplo@gmail.com"/><br></br>
+            <Field name="email_usuario" placeholder="CorreoDeEjemplo@gmail.com" className='text-black'/><br></br>
             <ErrorMessage name='email_usuario' className='text-red-900' component="p"/>
             </div>
             <div>
             <label>Telefono Movil</label>
-            <Field name="telefono_usuario" placeholder="622313017"/><br></br>
+            <Field name="telefono_usuario" placeholder="622313017" className='text-black'/><br></br>
             <ErrorMessage name='telefono_usuario' className='text-red-900' component="p"/>
             </div>
             <div>
             <label>Nombre Usuario</label>
-            <Field name="nombre_usuario" placeholder="Aszerk"/><br></br>
+            <Field name="nombre_usuario" placeholder="Aszerk" className='text-black'/><br></br>
             <ErrorMessage name='nombre_usuario' className='text-red-900' component="p"/>
             </div>
             <div>
             <label>Contraseña Usuario</label>
-            <Field name="contraseña_usuario" type="password"/><br></br>
+            <Field name="contraseña_usuario" type="password" className='text-black'/><br></br>
             <ErrorMessage name='contraseña_usuario' className='text-red-900' component="p"/>
             </div>
             <div>
             <label>Direccion</label>
-            <Field name="direccion" placeholder="Calle de la Justicia 8 Fuenlabrada Madrid 28089"/><br></br>
+            <Field name="direccion" placeholder="Calle de la Justicia 8 Fuenlabrada Madrid 28089" className='text-black'/><br></br>
             <ErrorMessage name='direccion' className='text-red-900' component="p"/>
             </div>
-            <button type='submit'>Registrarse</button>
+            <button type='submit' className='mt-10 mb-10 bg-indigo-600 hover:bg-indigo-500 text-3xl'>Registrar Admin</button>
             </div>
           </Form>
       )}

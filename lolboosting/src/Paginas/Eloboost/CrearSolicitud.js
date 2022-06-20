@@ -16,7 +16,7 @@ function CrearSolicitud() {
     "Platino3","Platino2","Platino1","Diamante4","Diamante3","Diamante2","Diamante1","Maestro","GranMaestro","Aspirante"]
     const roles = ["Top","Jungler","Mid","Adc","Support"]
   return (
-    <div>
+    <div className='divBox flex items-center justify-center text-white mb-10'>
         <Formik
         initialValues={{
             titulo: '',
@@ -211,7 +211,7 @@ function CrearSolicitud() {
           {({handleSubmit}) =>(
              <Form onSubmit={handleSubmit}>
               <label>Rango Actual</label><br></br>
-             <Field component="select" name="liga_inicio" >
+             <Field component="select" name="liga_inicio" className='text-black'>
                <option defaultValue="Seleccioneunaopcion">Seleciona una opcion</option>
                <option value="Sinrango">Sin rango</option>
                <optgroup label='Hierro'>
@@ -262,7 +262,7 @@ function CrearSolicitud() {
               </Field><br/>
               <ErrorMessage name='liga_inicio' className='text-red-900' component="p"></ErrorMessage><br/>
               <label>Rango Deseado</label><br></br>
-             <Field component="select" name="liga_deseada" >
+             <Field component="select" name="liga_deseada" className='text-black'>
                <option defaultValue="Seleccioneunaopcion">Seleciona una opcion</option>
                <optgroup label='Hierro'>
                 <option value="Hierro4">Hierro 4</option> 
@@ -312,7 +312,7 @@ function CrearSolicitud() {
               </Field><br/>
               <ErrorMessage name='liga_deseada' className='text-red-900' component="p"></ErrorMessage><br/>
               <label>Rol Preferido</label><br></br>
-             <Field component="select" name="rol_preferido" >
+             <Field component="select" name="rol_preferido" className='text-black'>
                <option defaultValue="Seleccioneunaopcion">Seleciona una opcion</option>
                 <option value="Top">Toplane</option>
                 <option value="Jungler">Jungla</option>
@@ -323,15 +323,15 @@ function CrearSolicitud() {
               </Field><br/>
               <ErrorMessage name='rol_preferido' className='text-red-900' component="p"></ErrorMessage><br/>
               <label>Nombre de la cuenta</label><br/>
-              <Field name="nombre_cuenta"></Field><br/>
+              <Field name="nombre_cuenta" className='text-black' placeholder='Nombre cuenta'></Field><br/>
               <ErrorMessage name='nombre_cuenta' className='text-red-900' component="p"></ErrorMessage><br/>
               <label>Contraseña de la cuenta</label><br/>
-              <Field name="passwd_cuenta"></Field><br/>
+              <Field name="passwd_cuenta" className='text-black'></Field><br/>
               <ErrorMessage name='passwd_cuenta' className='text-red-900' component="p"></ErrorMessage><br/>
               <label>Campeon / Campeones Preferidos</label><br/>
-              <Field name="campeon_preferido"></Field><br/>
+              <Field name="campeon_preferido" className='text-black' placeholder='Skarner'></Field><br/>
               <ErrorMessage name='campeon_preferido' className='text-red-900' component="p"></ErrorMessage><br/>
-             <button type='submit'>Subir Cuenta</button>
+             <button type='submit' className='bg-indigo-600 hover:bg-indigo-500 text-3xl mt-10 mb-10'>Pagar Servicio</button>
          </Form>
           )}
         </Formik>

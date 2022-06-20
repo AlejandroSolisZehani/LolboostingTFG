@@ -33,7 +33,7 @@ function ActualizarMaestria() {
     if(Maestria.activo===false){
         return <div>No se ha encontrado la Maestria</div>
     }
-    return <div>
+    return <div className='divBox flex items-center justify-center text-white mb-10'>
         <Formik
         initialValues={Maestria}
         validationSchema={Yup.object({
@@ -51,7 +51,7 @@ function ActualizarMaestria() {
         .then(res => {
             console.log(res)
             if(res.status===200){
-                toast.success("Se ha actualizado correctamente")
+                toast.success("Se ha actualizado la Maestria correctamente")
                 navigate("/maestrias")
             }
         })
@@ -73,12 +73,12 @@ function ActualizarMaestria() {
           {({handleSubmit}) =>(   
             <Form onSubmit={handleSubmit}>
                 <label>Nombre de Invocador</label><br></br>
-                <Field name='nombre_cuenta'></Field><br></br>
-                <ErrorMessage name='nombre_cuenta'></ErrorMessage><br></br>
+                <Field name='nombre_cuenta' className='text-black' placeholder='Nombre Cuenta'></Field><br></br>
+                <ErrorMessage name='nombre_cuenta' className='text-red-900' component="p"></ErrorMessage><br></br>
                 <label>Contraseña de la Cuenta</label><br></br>
-                <Field name='passwd_cuenta' type='password'></Field><br></br>
-                <ErrorMessage name='passwd_cuenta'></ErrorMessage>
-                <button type='submit'>Actualizar Datos de Maestria</button>
+                <Field name='passwd_cuenta' type='password' className='text-black'></Field><br></br>
+                <ErrorMessage name='passwd_cuenta' className='text-red-900' component="p"></ErrorMessage>
+                <button type='submit' className='bg-indigo-600 hover:bg-indigo-500 text-3xl mt-10 mb-10'>Actualizar Datos de Maestria</button>
             </Form>
         )}
         </Formik>

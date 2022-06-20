@@ -54,27 +54,27 @@ function Registrarse() {
           <Form onSubmit={handleSubmit}>
             <h1 className='px-2 py-2 text-5xl mt-10 mb-10'>Registrarse</h1>
             <div className='mt-10 text-black'>
-            <label>Correo Electronico</label><br></br>
+            <label className='text-white'>Correo Electronico</label><br></br>
             <Field name="email_usuario" placeholder="CorreoDeEjemplo@gmail.com"/><br></br>
             <ErrorMessage name='email_usuario' className='text-red-900' component="p"/>
             </div>
             <div className='mt-10 text-black'>
-            <label>Telefono Movil</label><br></br>
+            <label className='text-white'>Telefono Movil</label><br></br>
             <Field name="telefono_usuario" placeholder="622313017"/><br></br>
             <ErrorMessage name='telefono_usuario' className='text-red-900' component="p"/>
             </div>
             <div className='mt-10 text-black'>
-            <label>Nombre Usuario</label><br></br>
+            <label className='text-white'>Nombre Usuario</label><br></br>
             <Field name="nombre_usuario" placeholder="Aszerk"/><br></br>
             <ErrorMessage name='nombre_usuario' className='text-red-900' component="p"/>
             </div>
             <div className='mt-10 text-black'>
-            <label>Contraseña Usuario</label><br></br>
+            <label className='text-white'>Contraseña Usuario</label><br></br>
             <Field name="contraseña_usuario" type="password"/><br></br>
             <ErrorMessage name='contraseña_usuario' className='text-red-900' component="p"/>
             </div>
             <div className='mt-10 text-black'>
-            <label>Direccion</label><br></br>
+            <label className='text-white'>Direccion</label><br></br>
             <Field name="direccion" placeholder="Calle de la Justicia 8 Fuenlabrada Madrid 28089"/><br></br>
             <ErrorMessage name='direccion' className='text-red-900' component="p"/>
             </div>

@@ -17,7 +17,7 @@ function CrearCoachings() {
   },[])
   
   return (
-    <div>
+    <div className='divBox flex items-center justify-center text-white mb-10'>
         <Formik
           initialValues={{
             titulo: '',
@@ -25,7 +25,7 @@ function CrearCoachings() {
             activo: true,
             roles_preferidos: '',
             idioma: '',
-            partidas: 0,
+            partidas: 1,
             id_cliente: '',
             id_booster: localStorage.getItem("IdUsuario"),
             precio: 0,
@@ -161,7 +161,7 @@ function CrearCoachings() {
              <Form onSubmit={handleSubmit}>
 
              <label>Rango actual</label><br></br>
-             <Field component="select" name="titulo">
+             <Field component="select" name="titulo" className='text-black'>
                <option defaultValue="Seleccioneunaopcion">Seleciona una opcion</option>
                <option value="Sinrango">Sin rango</option>
                <optgroup label='Hierro'>
@@ -210,9 +210,9 @@ function CrearCoachings() {
               <option value="Aspirante">Aspirante</option>
               </optgroup>
               </Field><br/>
-              <ErrorMessage name='titulo'></ErrorMessage><br/>
+              <ErrorMessage name='titulo' className='text-red-900' component="p"></ErrorMessage><br/>
               <label>Rol Preferido</label><br></br>
-              <Field component="select" name="roles_preferidos">
+              <Field component="select" name="roles_preferidos" className='text-black'>
               <option defaultValue="Sinvalor">Selecciona un valor</option>
               <option value="Top">Top</option>
               <option value="Jungler">Jungla</option>
@@ -220,20 +220,17 @@ function CrearCoachings() {
               <option value="Adc">Tirador</option>
               <option value="Support">Soporte</option>
               </Field><br></br>
-              <ErrorMessage name='roles_preferidos'></ErrorMessage><br></br>
+              <ErrorMessage name='roles_preferidos' className='text-red-900' component="p"></ErrorMessage><br></br>
               <label>Numero de partidas</label><br></br>
-              <Field name='partidas' placeholder='1-15'></Field><br></br>
-              <ErrorMessage name='partidas'></ErrorMessage><br></br>
+              <Field name='partidas' placeholder='1-15' className='text-black'></Field><br></br>
+              <ErrorMessage name='partidas' className='text-red-900' component="p"></ErrorMessage><br></br>
               <label>Idioma</label><br></br>
-              <Field name="idioma" placeholder="Español, Frances..."></Field><br></br>
-              <ErrorMessage name='idioma'></ErrorMessage><br></br>
+              <Field name="idioma" placeholder="Español, Frances..." className='text-black'></Field><br></br>
+              <ErrorMessage name='idioma' className='text-red-900' component="p"></ErrorMessage><br></br>
               <label>Correo de contacto</label><br></br>
-              <Field name="correo_coach" placeholder="Correo_contacto@gmail.com"></Field><br></br>
-              <ErrorMessage name='correo_coach'></ErrorMessage><br></br>
-             <button type='submit' onClick={(e)=>{
-
-              
-              }}>Subir Cuenta</button>
+              <Field name="correo_coach" placeholder="Correo_contacto@gmail.com" className='text-black'></Field><br></br>
+              <ErrorMessage name='correo_coach' className='text-red-900' component="p"></ErrorMessage><br></br>
+             <button type='submit' className='mt-10 mb-10 bg-indigo-600 hover:bg-indigo-500 text-3xl'>Subir Coach</button>
          </Form>
           )}
            

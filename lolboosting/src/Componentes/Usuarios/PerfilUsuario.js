@@ -116,9 +116,9 @@ export function PerfilUsuario({Perfil}) {
         </strong>
         </p>
       </div>
-      <div className='flex justify-center text-2xl mt-3 mb-6 w-full'>
+      <div className='flex justify-center mt-3 mb-6 w-full'>
       <p className='hover:bg-stone-600'>Correo Usuario<br></br>
-        <strong className='p-4'>
+        <strong >
           {Perfil.email_usuario}
         </strong>
         </p>
@@ -181,7 +181,7 @@ export function PerfilUsuario({Perfil}) {
       </div>
       <div className='flex justify-center text-2xl mt-3 mb-6 w-full'>
       <p className='hover:bg-stone-600'>Correo Usuario<br></br>
-        <strong className='p-4'>
+        <strong>
           {Perfil.email_usuario}
         </strong>
         </p>
