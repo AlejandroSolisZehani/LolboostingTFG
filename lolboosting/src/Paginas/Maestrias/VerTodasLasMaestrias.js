@@ -29,13 +29,27 @@ export default function VerTodasLasMaestrias() {
       },[])
       const [Maestria, setMaestria] = useState([])
       if(Maestria.length===0){
-        return <div>No hay solicitudes de Boost todavia</div>
+        return <div >
+            <div>No hay solicitudes de Boost de Maestrias por el momento</div>
+            <br></br>
+            <div className='flex justify-center px-12 py-12 text-3xl mx-4 my-4 h-24'>
+            <button className='bg-orange-500' onClick={()=>{navigate("/maestria")}}>Solicitar Eloboost de Maestria</button>
+            </div>
+            
+        </div>
       }else{
-        return <div className='grid grid-cols-1 gap-10'>
+        return <div>
+            <div className='flex justify-center px-12 py-12 text-3xl mx-4 my-4 h-24'>
+            <div className="mb-30 text-white">
+            <button className='bg-orange-500 mb-10' onClick={()=>{navigate("/maestria")}}>Solicitar Maestria</button><br></br>
+            </div>
+            </div>
+            <div className='grid grid-cols-1 gap-10 mt-20'>
         {Maestria.filter(Maestria=> Maestria.activo===true).map(Maestria=>(
             <TarjetaMaestrias Maestria={Maestria} key={Maestria._id}/>
         ))}
 
+    </div>
     </div>
       }
 }

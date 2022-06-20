@@ -55,14 +55,20 @@ function TarjetaProducto({Producto}) {
       <div className='bg-zinc-800 text-white rounded-sm shadow-sm shadow-black
       hover:bg-zinc-700 hover:cursor-pointer'>
         <div>
-          <p>{Producto._id}</p>
-          <h1>{Producto.titulo}</h1>
-          <img src={Producto.imagenes} alt='Imagen del producto'/>
-          <p>{Producto.precio}€</p>
-          <button className='bg-orange-600 text-xl px-2 py-1 rounded-sm' onClick={()=>{
+          <p className='flex justify-center'>{Producto._id}</p>
+          <h1 className='flex justify-center'>{Producto.titulo}</h1>
+          <div className='flex justify-center '>
+          <img src={Producto.imagenes} alt='Imagen del producto' className='w-96'/>
+          </div>
+          
+          <p className='flex justify-center'>{Producto.precio}€</p>
+          <div className='flex justify-center '>
+          <button className='flex justify-center bg-orange-600 text-xl px-2 py-1 rounded-sm' onClick={()=>{
             navigate(`/editarproducto/${Producto._id}`)
           }}>Editar</button>
-          <button className='bg-red-500 text-xl px-2 py-1 rounded-sm' onClick={()=>{
+          </div>
+          <div className='flex justify-center'>
+          <button className='flex justify-center bg-red-500 text-xl px-2 py-1 rounded-sm' onClick={()=>{
             toast((t) =>(
               <div className='text-xl text-white'>
                   <p>¿Quieres eliminar el producto?</p>
@@ -92,7 +98,7 @@ function TarjetaProducto({Producto}) {
                           }
                         })
                       }}>Eliminar</button>
-                      <button className='bg-slate-400 hover:bg-slate-500 px-3 py-2 text-white rounded-sm mx-2' onClick={()=>{toast.dismiss(t.id)}}>Cancelar</button>
+                      <button className='flex- justify-center bg-slate-400 hover:bg-slate-500 px-3 py-2 text-white rounded-sm mx-2' onClick={()=>{toast.dismiss(t.id)}}>Cancelar</button>
                   </div>
               </div>
           ),{
@@ -101,6 +107,7 @@ function TarjetaProducto({Producto}) {
               }
           })
           }}>Eliminar</button>
+          </div>
         </div>
       </div>
     )
@@ -109,14 +116,20 @@ function TarjetaProducto({Producto}) {
       <div className='bg-zinc-800 text-white rounded-sm shadow-sm shadow-black
       hover:bg-zinc-700 hover:cursor-pointer'>
         <div>
-          <p>{Producto._id}</p>
-          <h1>{Producto.titulo}</h1>
-          <img src={Producto.imagenes} alt='Imagen del producto'/>
-          <p>{Producto.precio}€</p>
-          <button className='bg-orange-500 text-xl px-2 py-1 rounded-sm' onClick={()=>{
+          <div>
+          <p className='flex justify-center'>{Producto._id}</p>
+          <h1 className='flex justify-center'>{Producto.titulo}</h1>
+          <div className='flex justify-center'>
+          <img src={Producto.imagenes} alt='Imagen del producto' className='flex justify-center w-96'/>
+          </div>
+          <p className='flex justify-center'>{Producto.precio}€</p>
+          <div className='flex justify-center'>
+          <button className='flex justify-center bg-orange-500 text-xl px-2 py-1 rounded-sm' onClick={()=>{
             guardarProducto(Producto._id,1)
             navigate("/productos")
           }}>Comprar</button>
+          </div>
+        </div>
         </div>
       </div>
     )

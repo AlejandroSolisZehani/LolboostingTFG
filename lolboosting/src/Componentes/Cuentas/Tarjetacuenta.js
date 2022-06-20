@@ -53,12 +53,17 @@ export function Tarjetacuenta({cuentadatos}) {
     <div className='bg-zinc-800 text-white rounded-sm shadow-sm shadow-black
     hover:bg-zinc-700 hover:cursor-pointer'>
     <div className='px-4 py-7'>
-      <div className='flex justify-between'>
-      <h4>{cuentadatos.rango_temporada_actual}</h4>
+      <div className='flex justify-center'>
+      <h1 className='flex justify-center text-2xl'>{cuentadatos.titulo}</h1>
       </div>
-      <h1>{cuentadatos.nivel_cuenta}</h1>
-      <p>{cuentadatos.precio}€</p>
-      <div>
+      
+      <p className='flex justify-center'>Servidor:{cuentadatos.servidor}</p>
+      <p className='flex justify-center'>Campeones: {cuentadatos.campeones}</p>
+      <p className='flex justify-center'>Aspectos: {cuentadatos.aspectos}</p>
+      <p className='flex justify-center'>Precio: {cuentadatos.precio}€</p>
+      <p className='flex justify-center'>Riot Points: {cuentadatos.riot_points}</p>
+      <p className='flex justify-center'>Esencia Azul: {cuentadatos.esencia_azul}</p>
+      <div className='flex justify-center'>
         <button className='bg-orange-500 text-xl px-2 py-1 rounded-sm hover:bg-orange-400' onClick={()=>{
             if(cuentadatos.id_comprador!==""){
                 toast.error("Cuenta ya comprada. En caso de haberla comprado la puedes ver en tu perfil")
@@ -146,12 +151,12 @@ export function Tarjetacuenta({cuentadatos}) {
             <div className='bg-zinc-800 text-white rounded-sm shadow-sm shadow-black
             hover:bg-zinc-700 hover:cursor-pointer'>
             <div className='px-4 py-7'>
-              <div className='flex justify-between'>
-              <h4>{cuentadatos._id}</h4>
+              <div className='flex justify-center'>
+              <h4>{cuentadatos.titulo}</h4>
               </div>
-              <h1>{cuentadatos.id_vendedor}</h1>
-              <p>{cuentadatos.servidor}€</p>
-              <div>
+              <h1 className='flex justify-center'>{cuentadatos.correo_cuenta}</h1>
+              <p className='flex justify-center'>Precio: {cuentadatos.precio}€</p>
+              <div className='flex justify-center'>
                 <button className='bg-red-700 text-xl px-2 py-1 rounded-sm hover:bg-red-400' onClick={()=>handleDelete(cuentadatos._id)}>Eliminar</button>
                 <button className='bg-blue-800 text-xl px-2 py-1 rounded-sm hover:bg-blue-400' onClick={()=>{navigate(`/actualizarcuenta/${cuentadatos._id}`)}}>Editar</button>
               </div>

@@ -18,12 +18,13 @@ export default function TarjetaMaestria({Maestria}) {
     <div className='bg-zinc-800 text-white rounded-sm shadow-sm shadow-black
     hover:bg-zinc-700 hover:cursor-pointer'>
     <div className='px-4 py-7'>
-      <div className='flex justify-between'>
-      <h4>{Maestria._id}</h4>
+      <div className='flex justify-center'>
+      <h4>{Maestria.campeon}</h4>
       </div>
-      <p>{Maestria.titulo}</p>
-      <p>{Maestria.precio}€</p>
+      <p className='flex justify-center'>{Maestria.titulo}</p>
+      <p className='flex justify-center'>Precio: {Maestria.precio}€</p>
       <div>
+        <div className='flex justify-center'>
         <button className='bg-orange-500 text-xl px-2 py-1 rounded-sm hover:bg-orange-400' onClick={()=>{
           let saldoaganar = Maestria.precio-Maestria.precio/10
           toast((t) =>(
@@ -100,6 +101,7 @@ export default function TarjetaMaestria({Maestria}) {
             }
         })
         }}>Boostear</button>
+        </div>
       </div>
     </div>
     </div>
@@ -112,13 +114,12 @@ export default function TarjetaMaestria({Maestria}) {
             <div className='bg-zinc-800 text-white rounded-sm shadow-sm shadow-black
             hover:bg-zinc-700 hover:cursor-pointer'>
             <div className='px-4 py-7'>
-              <div className='flex justify-between'>
-              <h4>{Maestria._id}</h4>
+              <div className='flex justify-center'>
+              <h4 className='flex justify-center'>{Maestria.campeon}</h4>
               </div>
-              <p>{Maestria.campeon}</p>
-            <p>{Maestria.titulo}</p>
-            <p>{Maestria.precio}€</p>
-              <div>
+              <p className='flex justify-center'>{Maestria.titulo}</p>
+            <p className='flex justify-center'>{Maestria.precio}€</p>
+              <div className='flex justify-center'>
                 <button className='bg-blue-800 text-xl px-2 py-1 rounded-sm hover:bg-blue-400' onClick={()=>{
                   if(Maestria.id_cliente===localStorage.getItem("IdUsuario")){
                     navigate(`/actualizarmaestria/${Maestria._id}`)

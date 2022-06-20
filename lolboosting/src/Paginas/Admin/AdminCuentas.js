@@ -62,7 +62,7 @@ function AdminCuentas() {
     },[Cuenta])
   return (
     
-        <div className='grid grid-cols-3 gap-2'>
+        <div className='grid grid-cols-1 gap-10'>
             {Cuenta.map(Cuenta=>(
                 <TarjetasCuentas Cuentas={Cuenta} key={Cuenta._id}/>
             ))}

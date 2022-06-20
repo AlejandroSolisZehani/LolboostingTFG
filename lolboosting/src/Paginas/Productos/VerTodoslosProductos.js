@@ -31,9 +31,10 @@ export default function VerTodoslosProductos() {
     }
   },[])
   if(Producto.filter(Producto => Producto.activo===true).length===0){
-    return <div>No hay Productos todavia :/ </div>
+    return <div>
+      No hay Productos todavia :/ </div>
   }else{
-      return <div className='grid grid-cols-1 gap-10'>
+      return <div className='grid grid-cols-1 gap-10 mb-10'>
             {Producto.filter(Producto=> Producto.activo===true).map(Producto=>(
                 <TarjetasProductos Productos={Producto} key={Producto._id}/>
             ))}

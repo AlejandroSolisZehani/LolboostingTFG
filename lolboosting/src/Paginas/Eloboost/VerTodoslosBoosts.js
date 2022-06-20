@@ -28,13 +28,28 @@ export default function VerTodoslosBoosts() {
       },[])
       const [Boost, setBoost] = useState([])
       if(Boost.length===0){
-        return <div>No hay solicitudes de Boost todavia</div>
+        return <div>
+            <div>No hay solicitudes de Boost todavia</div>
+            <br></br>
+            <div className='flex justify-center px-12 py-12 text-3xl mx-4 my-4 h-24'>
+            <button className='bg-orange-500 ' onClick={()=>{navigate("/eloboost")}}>Solicitar Eloboost</button>
+            </div>
+            
+        </div>
       }else{
-        return <div className='grid grid-cols-1 gap-10'>
+        return <div>
+            <div className='flex justify-center px-12 py-12 text-3xl mx-4 my-4 h-24'>  
+            <div className="mb-30 text-white">
+            <button className='bg-orange-500 mb-10' onClick={()=>{navigate("/eloboost")}}>Solicitar Eloboost</button><br></br>
+            </div>
+            </div>
+            
+        <div className='grid grid-cols-1 gap-10 mb-10 mt-10'>
         {Boost.filter(Boost=> Boost.activo===true).map(Boost=>(
             <TarjetasBoosts Boost={Boost} key={Boost._id}/>
         ))}
 
+    </div>
     </div>
       }
 }

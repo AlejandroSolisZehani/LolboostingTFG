@@ -31,12 +31,14 @@ export function VerMaestria() {
       },[])
       
       if(Maestria.length===0){
-        return <div>No hay solicitudes de Boost todavia</div>
+        return <div className='flex justify-center'><div>No hay solicitudes de Boost de Maestria</div></div>
       }else if(Maestria.activo===false){
 
-        return <div>Esta solicitud de boost de Maestria ya no esta activa</div>
+        return <div>
+          Esta solicitud de boost de Maestria ya no esta activa
+          </div>
       }else{
-        return <div className='grid grid-cols-3 gap-3'>
+        return <div className='grid grid-cols-1 gap-10'>
             <TarjetaMaestria Maestria={Maestria} key={Maestria._id}/>
     </div>
 }

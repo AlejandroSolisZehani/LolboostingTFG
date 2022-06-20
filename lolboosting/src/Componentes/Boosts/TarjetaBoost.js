@@ -18,14 +18,13 @@ export default function TarjetaBoost({Boost}) {
     <div className='bg-zinc-800 text-white rounded-sm shadow-sm shadow-black
     hover:bg-zinc-700 hover:cursor-pointer'>
     <div className='px-4 py-7'>
-      <div className='flex justify-between'>
-      <h4>{Boost._id}</h4>
+      <div className='flex justify-center'>
+      <h4 className='flex justify-center text-2xl'>{Boost.titulo}</h4>
       </div>
-      <h1>{Boost.id_vendedor}</h1>
-      <p>{Boost.liga_inicio}</p>
-      <p>{Boost.liga_deseada}</p>
-      <p>{Boost.precio}€</p>
-      <div>
+      <p className='flex justify-center'>Rol / Roles Preferidos: {Boost.rol_preferido}</p>
+      <p className='flex justify-center'>Campeon Preferido: {Boost.campeon_preferido}</p>
+      <p className='flex justify-center'>Precio: {Boost.precio}€</p>
+      <div className='flex justify-center'>
         <button className='bg-orange-500 text-xl px-2 py-1 rounded-sm hover:bg-orange-400' onClick={()=>{
           let saldoaganar = Boost.precio-Boost.precio/10
           toast((t) =>(
@@ -114,13 +113,13 @@ export default function TarjetaBoost({Boost}) {
             <div className='bg-zinc-800 text-white rounded-sm shadow-sm shadow-black
             hover:bg-zinc-700 hover:cursor-pointer'>
             <div className='px-4 py-7'>
-              <div className='flex justify-between'>
-              <h4>{Boost._id}</h4>
+              <div className='flex justify-center'>
+              <h4>{Boost.titulo}</h4>
               </div>
-              <h1>{Boost.id_vendedor}</h1>
-            <p>{Boost.liga_inicio}</p>
-            <p>{Boost.liga_deseada}</p>
-              <div>
+              <p className='flex justify-center'>Rol / Roles Preferidos: {Boost.rol_preferido}</p>
+              <p className='flex justify-center'>Campeon Preferido: {Boost.campeon_preferido}</p>
+            <p className='flex justify-center'>Precio: {Boost.precio}€</p>
+              <div className='flex justify-center'>
                 <button className='bg-blue-800 text-xl px-2 py-1 rounded-sm hover:bg-blue-400' onClick={()=>{navigate(`/actualizarboost/${Boost._id}`)}}>Editar</button>
               </div>
             </div>

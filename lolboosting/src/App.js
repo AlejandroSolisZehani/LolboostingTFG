@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import {Aterrizaje,Login,NotFound, Registrarse, Vercuentas, Vercuenta,
   CrearCuenta, ModificarCuenta, Perfil, ModificarPerfil, CrearSolicitud,VerTodoslosBoosts,
   VerBoost, ActualizarBoost, CrearBoostMaestria, VerTodasLasMaestrias, VerMaestria, PasarSaldo, ActualizarMaestria,
@@ -7,8 +7,8 @@ import {Aterrizaje,Login,NotFound, Registrarse, Vercuentas, Vercuenta,
   CrearProducto, VerProducto, VerTodoslosProductos, EditarProducto,
   Dashboard, Añadiradmin, Verusuarios, AdminCuentas, AdminMaestrias, Admincoachings, Admineloboosts,
   UsuarioCoachings, UsuarioCuentas, UsuarioEloboosts, UsuarioMaestrias, Carrito} from './Paginas/index'
-import {Routes, Route, Link} from 'react-router-dom'
-import { Toaster, toast } from 'react-hot-toast'
+import {Routes, Route, Link, useNavigate} from 'react-router-dom'
+import { Toaster } from 'react-hot-toast'
 import {AiOutlineClose, AiOutlineMail, AiOutlineMenu} from 'react-icons/ai'
   import {
     FaFacebookSquare,
@@ -18,7 +18,7 @@ import {AiOutlineClose, AiOutlineMail, AiOutlineMenu} from 'react-icons/ai'
   } from 'react-icons/fa'
 function App() {
   const [nav, setNav] = useState(false)
-
+  const navigate = useNavigate()
   const handlenav = () =>{
       setNav(!nav)
   }
@@ -26,30 +26,30 @@ function App() {
     <>
     <div>
     <div className='flex justify-between items-center max-w-[1920px] mx-auto px-4 h-24 text-white bg-black'>
-        <h1 className='w-full text-3xl font-bold m-4'>Lolboosting</h1>
+        <Link to='/'><h1 className='w-full text-3xl font-bold m-4'>Lolboosting</h1></Link>
         <ul className='hidden md:flex'>
-          <li className='p-3'>Home</li>
-          <li className='p-3'>Cuentas</li>
-          <li className='p-3'>Eloboosts</li>
-          <li className='p-3'>Maestrias</li>
-          <li className='p-3'>Coachings</li>
-          <li className='p-3'>Carrito</li>
-          <li className='p-3'>Perfil</li>
+        <Link to='/productos' className="p-3"> <li className='p-3'>Productos</li></Link>
+        <Link to='/cuentas' className="p-3"><li className='p-3' >Cuentas</li></Link>
+        <Link to='/boost' className="p-3"><li className='p-3'>Eloboosts</li></Link>
+        <Link to='/maestrias' className="p-3"><li className='p-3'>Maestrias</li></Link>
+        <Link to='/coachings' className="p-3"><li className='p-3'>Coachings</li></Link>
+        <Link to='/carrito' className="p-3"><li className='p-3'>Carrito</li></Link>
+        <Link to='/miperfil' className="p-3"><li className='p-3'>Perfil</li></Link>
         </ul>
         <div onClick={handlenav} className='block md:hidden'>
           {!nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20}/>  }
           
         </div>
-        <div className={nav ? 'fixed left-0 top-0 w-[70%] h-full border-r-gray-900 bg-[#000300] ease-in-out duration-500' : 'fixed left-[-100%]'}>
-        <h1 className='w-full text-3xl font-bold m-4'>Lolboosting</h1>
+        <div className={nav ? 'fixed left-0 top-0 w-[70%] h-full border-r-gray-900 bg-[#000300] ease-in-out duration-500 z-10' : 'fixed left-[-100%] z-10'}>
+        <h1 className='w-[70%]text-3xl font-bold m-4 '><Link to='/'>Lolboosting</Link></h1>
           <ul className='p-4 uppercase'>
-          <li className='p-4 border-b border-gra-600'>Home</li>
-          <li className='p-4 border-b border-gra-600'>Cuentas</li>  
-          <li className='p-4 border-b border-gra-600'>Eloboosts</li>
-          <li className='p-4 border-b border-gra-600'>Maestrias</li>
-          <li className='p-4 border-b border-gra-600'>Coachings</li>
-          <li className='p-4 border-b border-gra-600'>Carrito</li>
-          <li className='p-4 border-b border-gra-600'>Perfil</li>
+          <Link to='/productos'> <li className="p-4 border-b border-gra-600">Productos</li></Link>
+          <Link to='/cuentas'><li className='p-4 border-b border-gra-600' >Cuentas</li></Link>
+          <Link to='/boost'><li className='p-4 border-b border-gra-600'>Eloboosts</li></Link>
+          <Link to='/maestrias'><li className='p-4 border-b border-gra-600'>Maestrias</li></Link>
+          <Link to='/coachings'><li className='p-4 border-b border-gra-600'>Coachings</li></Link>
+          <Link to='/carrito'><li className='p-4 border-b border-gra-600'>Carrito</li></Link>
+          <Link to='/miperfil'><li className='p-4 border-b border-gra-600'>Perfil</li></Link>
           </ul>
         </div>
     </div>
@@ -58,6 +58,7 @@ function App() {
    
       <div className='px-10 container m-auto'>
       <Link to='/' className="text-black-100 block">Go to home</Link>
+      <React.StrictMode>
       <Routes>
         <Route path='/' element={<Aterrizaje/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
@@ -99,6 +100,7 @@ function App() {
         <Route path='/miperfil/maestrias' element={<UsuarioMaestrias/>}></Route>
         <Route path='/carrito' element={<Carrito/>}></Route>
       </Routes>
+      </React.StrictMode>
       <Toaster/>
       </div>
       

@@ -63,7 +63,7 @@ function Admincoachings() {
   },[Coachings])
 return (
   
-      <div className='grid grid-cols-3 gap-2'>
+      <div className='grid grid-cols-1 gap-10'>
           {Coachings.map(Coach=>(
               <TarjetasCoachings Coach={Coach} key={Coach._id}/>
           ))}

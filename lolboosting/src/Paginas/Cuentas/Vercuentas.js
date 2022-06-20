@@ -25,13 +25,23 @@ function Vercuentas() {
     
 
   if(cuentas.filter(cuenta=> cuenta.activo===true).length===0){
-    return <div>No hay cuentas todavia</div>
+    return <div className='flex justify-center'>
+      <div>No hay cuentas todavia</div>
+      <br></br>
+      <div className='flex justify-center px-12 py-12 text-3xl mx-4 my-4 h-24'><button className='bg-orange-500 ' onClick={()=>{navigate("/vendercuenta")}}>Subir Cuenta</button></div>
+    </div>
   }else{
-    return <div className='grid grid-cols-1 gap-10'>
+    return <div>
+      <div className='flex justify-center px-12 py-12 text-3xl mx-4 my-4 h-24'>
+        <div className="mb-20 text-white">
+      <button className='bg-orange-500 mb-20' onClick={()=>{navigate("/vendercuenta")}}>Subir Cuenta</button><br></br>
+      </div>
+      </div>
+      <div className='grid grid-cols-1 gap-10 mb-10 mt-10'>
         {cuentas.filter(cuenta=> cuenta.activo===true).map(cuenta=>(
             <Tarjetavercuentas cuentadatos={cuenta} key={cuenta._id}/>
         ))}
-
+    </div>
     </div>
   }
       

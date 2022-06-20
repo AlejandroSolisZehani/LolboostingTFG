@@ -51,7 +51,7 @@ function ActualizarBoost() {
                 .then(res => {console.log(res.status);
                 if(res.status===200){
                     toast.success("Subida de cuenta Correcta",{duration:2500})
-                    navigate('/cuentas')
+                    navigate('/boost')
                     }else{
                         toast.error("Algo salio mal")
                         }})

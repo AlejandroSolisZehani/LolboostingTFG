@@ -17,15 +17,15 @@ function Vercuenta() {
         .catch(error => console.log(error))
     }},[])
       if(cuenta.length===0){
-          return <div className='Cuenta bg-red'>
+          return <div className='flex justify-center bg-red'>
           No se ha encontrado la cuenta
       </div>
           
       }else if(cuenta.activo===false){
 
-        return <div>Esta solicitud de boost de Maestria ya no esta activa</div>
+        return <div className="flex justify-center">Esta solicitud de boost de Maestria ya no esta activa</div>
       }else{
-        return <div className='Cuenta'>
+        return <div className='grid grid-cols-1 mb-10'>
         <Tarjetacuenta cuentadatos={cuenta} key={cuenta._id}/>
    
     </div>

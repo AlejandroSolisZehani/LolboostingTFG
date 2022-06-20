@@ -62,7 +62,7 @@ function AdminMaestrias() {
     },[Maestria])
   return (
     
-        <div className='grid grid-cols-3 gap-2'>
+        <div className='grid grid-cols-1 gap-10'>
             {Maestria.map(Maestria=>(
                 <TarjetasMaestrias Maestria={Maestria} key={Maestria._id}/>
             ))}

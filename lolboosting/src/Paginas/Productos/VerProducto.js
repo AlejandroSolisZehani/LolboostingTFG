@@ -39,7 +39,7 @@ export default function VerProducto() {
   }else if(Producto.activo===false){
     return <div>Este Producto ya no esta disponible</div>
   }else{
-    return <div className='grid grid-cols-3 gap-3'>
+    return <div className='grid grid-cols-1 gap-10 mb-10'>
       <TarjetaProducto Producto={Producto} />
     </div>
   }

@@ -63,7 +63,7 @@ function Admineloboosts() {
   },[Boosts])
 return (
   
-      <div className='grid grid-cols-3 gap-2'>
+      <div className='grid grid-cols-1 gap-10'>
           {Boosts.map(Boost=>(
               <TarjetasEloboosts Eloboost={Boost} key={Boost._id}/>
           ))}
