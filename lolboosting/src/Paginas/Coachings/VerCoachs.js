@@ -39,14 +39,14 @@ export default function VerCoachs() {
             <div>No hay Ofertas de Coaching Disponibles</div>
             <br></br>
             <div className='flex justify-center px-12 py-12 text-3xl mx-4 my-4 h-24'>
-            <button className='bg-orange-500 ' onClick={()=>{navigate("/coach")}}>Solicitar Coach</button>
+            <button className='bg-orange-500 ' onClick={()=>{navigate("/coach")}}>Subir Coach</button>
             </div>
         </div>
     }else{
         return <div>
             <div className='flex justify-center px-12 py-12 text-3xl mx-4 my-4 h-24'>
             <div className="mb-20 text-white">
-            <button className='bg-orange-500 mb-10' onClick={()=>{navigate("/coach")}}>Solicitar Coach</button>
+            <button className='bg-orange-500 mb-10' onClick={()=>{navigate("/coach")}}>Subir Coach</button>
             </div>
             </div><br></br>
         <div className='grid grid-cols-1 gap-10 mb-10 mt-10'>

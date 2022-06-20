@@ -42,7 +42,7 @@ export default function VerCoach() {
   }else if(Coach.activo===false){
     return <div>Este coaching ya no esta disponible</div>
   }else{
-    return <div className='grid grid-cols-1 gap-10'>
+    return <div className='grid grid-cols-1 gap-10 mb-10'>
       <TarjetaCoach Coach={Coach} />
     </div>
   }

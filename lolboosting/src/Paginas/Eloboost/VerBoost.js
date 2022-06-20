@@ -36,7 +36,7 @@ export function VerBoost() {
         return <div>Esta solicitud de boost de Maestria ya no esta activa</div>
       }
       else{
-        return <div className='grid grid-cols-1 gap-10'>
+        return <div className='grid grid-cols-1 gap-10 mb-10'>
             <TarjetaBoost Boost={Boost} key={Boost._id}/>
     </div>
 }

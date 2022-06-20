@@ -33,7 +33,7 @@ export default function VerTodasLasMaestrias() {
             <div>No hay solicitudes de Boost de Maestrias por el momento</div>
             <br></br>
             <div className='flex justify-center px-12 py-12 text-3xl mx-4 my-4 h-24'>
-            <button className='bg-orange-500' onClick={()=>{navigate("/maestria")}}>Solicitar Eloboost de Maestria</button>
+            <button className='bg-orange-500' onClick={()=>{navigate("/maestria")}}>Solicitar Maestria</button>
             </div>
             
         </div>

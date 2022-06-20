@@ -87,6 +87,13 @@ export function PerfilUsuario({Perfil}) {
       <div className='flex justify-center mb-6 mt-3 text-light-200'>
          <div><img src={Perfil.url_imagen} alt='Imagen de perfil' className='rounded-full mt-2 mb-2'/></div>
       </div>
+      <div className='flex justify-center text-2xl mt-3 mb-6'>
+      <button className='bg-red-600 hover:bg-red-500 px-3 py-3' onClick={()=>{
+        localStorage.clear()
+        navigate("/")
+        toast.success("Se ha cerrado la sesión",{style:{background:"#5cfaff"}})
+        }}>Cerrar Sesión</button>
+      </div>
       <div className='flex justify-center text-3xl mt-3 mb-6'>
         <p className='hover:bg-stone-600'>Nombre de Usuario<br></br>
         <strong className=''>
@@ -141,6 +148,16 @@ export function PerfilUsuario({Perfil}) {
          <div><img src={Perfil.url_imagen} alt='Imagen de perfil' className='rounded-full mt-2 mb-2'/></div>
       </div>
       <div className='flex justify-center text-3xl mt-3 mb-6'>
+        <button className='bg-green-400 px-3 py-3' onClick={()=>{navigate("/admin")}}>Panel de Admins</button>
+      </div>
+      <div className='flex justify-center text-2xl mt-3 mb-6'>
+      <button className='bg-red-600 hover:bg-red-500 px-3 py-3' onClick={()=>{
+        localStorage.clear()
+        navigate("/")
+        toast.success("Se ha cerrado la sesión",{style:{background:"#5cfaff"}})
+        }}>Cerrar Sesión</button>
+      </div>
+      <div className='flex justify-center text-3xl mt-3 mb-6'>
         <p className='hover:bg-stone-600'>Nombre de Usuario<br></br>
         <strong className=''>
           {Perfil.nombre_usuario}
@@ -185,9 +202,7 @@ export function PerfilUsuario({Perfil}) {
       <div className='flex justify-center text-2xl mt-3 mb-6'>
         <button className='bg-blue-300 px-3 py-3' onClick={()=>{servicios()}}>Ver mis servicios / cuentas</button>
       </div>
-      <div className='flex justify-center text-2xl mt-3 mb-6'>
-        <button className='bg-green-400 px-3 py-3' onClick={()=>{navigate("/admin")}}>Panel de Admins</button>
-      </div>
+
       </>
     )
   }

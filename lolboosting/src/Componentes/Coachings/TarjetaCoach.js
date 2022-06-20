@@ -11,14 +11,15 @@ function TarjetaCoach({Coach}) {
             <div className='bg-zinc-800 text-white rounded-sm shadow-sm shadow-black
             hover:bg-zinc-700 hover:cursor-pointer'>
             <div className='px-4 py-7'>
-              <div className='flex justify-center'>
-              <h4>{Coach._id}</h4>
+              <div className='flex justify-center text-2xl'>
+              <h4>{Coach.titulo}</h4>
               </div>
-              <p>{Coach.titulo} {Coach.partidas} Partidas</p>
-            <p>{Coach.idioma}</p>
-            <p>{Coach.roles_preferidos}</p>
-            <p>{Coach.precio}€</p>
-              <div>
+              <p className='flex justify-center'>Numero de Partidas: {Coach.partidas} </p>
+            <p className='flex justify-center'>Idioma: {Coach.idioma}</p>
+            <p className='flex justify-center'>Servidor: {Coach.servidor}</p>
+            <p className='flex justify-center'>Rol / Roles Dominantes: {Coach.roles_preferidos}</p>
+            <p className='flex justify-center'>Precio: {Coach.precio}€</p>
+              <div className='flex justify-center'>
                 <button className='bg-orange-500 text-xl px-2 py-1 rounded-sm hover:bg-orange-400' onClick={()=>{
                   let saldoaganar = Coach.precio-Coach.precio/10
                   toast((t) =>(
@@ -106,14 +107,16 @@ function TarjetaCoach({Coach}) {
             <div className='bg-zinc-800 text-white rounded-sm shadow-sm shadow-black
             hover:bg-zinc-700 hover:cursor-pointer'>
             <div className='px-4 py-7'>
-              <div className='flex justify-between'>
-              <h4>{Coach._id}</h4>
+              <div className='flex justify-center 2xl'>
+              <h4>{Coach.titulo}</h4>
               </div>
-              <p>{Coach.titulo} {Coach.partidas} Partidas</p>
-            <p>{Coach.idioma}</p>
-            <p>{Coach.roles_preferidos}</p>
-            <p>{Coach.precio}€</p>
-              <div>
+              <p className='flex justify-center text-xs'>{Coach.correo_coach} </p>
+              <p className='flex justify-center'>Numero de Partidas: {Coach.partidas} </p>
+              <p className='flex justify-center'>Idioma: {Coach.idioma}</p>
+            <p className='flex justify-center'>Servidor: {Coach.servidor}</p>
+            <p className='flex justify-center'>Rol / Roles Dominantes: {Coach.roles_preferidos}</p>
+            <p className='flex justify-center'>Precio: {Coach.precio}€</p>
+              <div className='flex justify-center'>
                 <button className='bg-blue-800 text-xl px-2 py-1 rounded-sm hover:bg-blue-400' onClick={()=>{
                   if(Coach.id_booster===localStorage.getItem("IdUsuario")){
                     navigate(`/editarcoach/${Coach._id}`)

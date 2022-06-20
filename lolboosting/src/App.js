@@ -107,8 +107,9 @@ function App() {
     </div>
     <div className='max-w-[1920px] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300 bg-black md:flex justify-center'>
     <div>
-    <h1 className='w-full text-3xl font-bold m-4'>Lolboosting</h1>
-    <p>CopyRight Alejandro Solis Zehani</p>
+    <h1 className='w-full text-3xl font-bold m-4'>Contacto</h1>
+    <p>alejandrosoliszehanitfg@gmail.com</p>
+    <p>Copyright © Alejandro Solís Zehani</p>
     <div className=' md:w-[75%] flex justify-between py-6'>
       <FaFacebookSquare size={30}/>
       <FaInstagram size={30}/>

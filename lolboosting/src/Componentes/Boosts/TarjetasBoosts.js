@@ -13,8 +13,8 @@ export default function TarjetasBoosts({Boost}) {
         <h4 className='flex justify-center text-2xl'>{Boost.titulo}</h4>
          
           
-          <p>Rol / Roles Preferidos: {Boost.rol_preferido}</p>
-          <p>Precio: {Boost.precio}€</p>
+          <p className='flex justify-center'>Rol / Roles Preferidos: {Boost.rol_preferido}</p>
+          <p className='flex justify-center'>Precio: {Boost.precio}€</p>
           <div className='flex justify-center'>
           <button className='bg-orange-600 text-xl px-2 py-1 rounded-sm' onClick={()=>{ navigate(`/boost/${Boost._id}`)}}>Ver Detalles</button>
           </div>

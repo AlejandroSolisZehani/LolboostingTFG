@@ -113,7 +113,7 @@ export default function TarjetaBoost({Boost}) {
             <div className='bg-zinc-800 text-white rounded-sm shadow-sm shadow-black
             hover:bg-zinc-700 hover:cursor-pointer'>
             <div className='px-4 py-7'>
-              <div className='flex justify-center'>
+              <div className='flex justify-center text-2xl'>
               <h4>{Boost.titulo}</h4>
               </div>
               <p className='flex justify-center'>Rol / Roles Preferidos: {Boost.rol_preferido}</p>
