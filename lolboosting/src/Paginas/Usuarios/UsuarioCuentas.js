@@ -31,7 +31,7 @@ export default function UsuarioCuentas() {
             }
         })
     }
-  },[])
+  },[Cuenta])
   console.log("Mis servicios")
   Cuentasactivas = Cuenta.filter(x => x.id_vendedor == localStorage.getItem("IdUsuario"))
   console.log(Cuentasactivas)

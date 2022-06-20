@@ -31,7 +31,7 @@ export default function UsuarioMaestrias() {
             }
         })
     }
-  },[])
+  },[Maestria])
   console.log("Mis servicios")
   MaestriaActiva = Maestria.filter(x => x.id_booster == localStorage.getItem("IdUsuario"))
   console.log(MaestriaActiva)

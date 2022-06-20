@@ -30,7 +30,7 @@ export default function UsuarioCoachings() {
             }
         })
     }
-  },[])
+  },[Coach])
   console.log("Mis servicios")
   CoachActivo = Coach.filter(x => x.id_booster == localStorage.getItem("IdUsuario"))
   console.log(CoachActivo)

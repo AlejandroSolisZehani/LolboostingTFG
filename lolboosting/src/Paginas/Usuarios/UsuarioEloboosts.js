@@ -31,7 +31,7 @@ export default function UsuarioEloboosts() {
             }
         })
     }
-  },[])
+  },[Eloboost])
   console.log("Mis servicios")
   EloboostActivo = Eloboost.filter(x => x.id_booster == localStorage.getItem("IdUsuario"))
   console.log(EloboostActivo)
