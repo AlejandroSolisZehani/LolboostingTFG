@@ -8,12 +8,13 @@ export default function TarjetasCuentas({Cuentas}) {
     return (
       <div className='bg-zinc-800 text-white rounded-sm shadow-sm shadow-black
       hover:bg-zinc-700 hover:cursor-pointer'>
-          <p>{Cuentas.titulo}</p>
-          <p>{Cuentas.rango_temporada_actual} Rango actual</p>
-          <p>{Cuentas.rango_temporada_pasada} Rango temporada pasada</p>
-          <p>{Cuentas.campeones} Campeones</p>
-          <p>Nivel {Cuentas.nivel_cuenta}</p>
-          <p>{Cuentas.precio}€</p>
+          <p className='flex justify-center'>{Cuentas.titulo}</p>
+          <p className='flex justify-center'>{Cuentas.rango_temporada_actual} Rango actual</p>
+          <p className='flex justify-center'>{Cuentas.rango_temporada_pasada} Rango temporada pasada</p>
+          <p className='flex justify-center'>{Cuentas.campeones} Campeones</p>
+          <p className='flex justify-center'>Nivel {Cuentas.nivel_cuenta}</p>
+          <p className='flex justify-center'>{Cuentas.precio}€</p>
+          <div className='flex justify-center'>
           <p><button className='bg-red-500' onClick={()=>{
               toast.dismiss()
               toast((t)=>(
@@ -25,7 +26,7 @@ export default function TarjetasCuentas({Cuentas}) {
                               console.log(res)
                               if(res.status===204){
                                   toast.dismiss()
-                                  toast.success("Se ha eliminado al usuario con exito")
+                                  toast.success("Se ha eliminado la cuenta con exito")
                               }
                           })
                           .catch(error=>{
@@ -51,6 +52,7 @@ export default function TarjetasCuentas({Cuentas}) {
                   }
               })
           }}>Eliminar</button></p>
+          </div>
       </div>
     )
 }

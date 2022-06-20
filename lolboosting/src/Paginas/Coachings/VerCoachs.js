@@ -49,7 +49,7 @@ export default function VerCoachs() {
             <button className='bg-orange-500 mb-10' onClick={()=>{navigate("/coach")}}>Subir Coach</button>
             </div>
             </div><br></br>
-        <div className='grid grid-cols-1 gap-10 mb-10 mt-10'>
+        <div className='mb-10 mt-10 gap-10 grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2'>
             {Coach.filter(coach=> coach.activo===true).map(coach=>(
                 <TarjetasCoachs Coachings={coach} key={coach._id}/>
             ))}

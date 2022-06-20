@@ -8,9 +8,10 @@ export default function TarjetasMaestrias({Maestria}) {
     return (
       <div className='bg-zinc-800 text-white rounded-sm shadow-sm shadow-black
       hover:bg-zinc-700 hover:cursor-pointer'>
-            <p>{Maestria.campeon}</p>
-          <p>{Maestria.titulo}</p>
-          <p>{Maestria.precio}</p>
+            <p className='flex justify-center'>{Maestria.campeon}</p>
+          <p className='flex justify-center'>{Maestria.titulo}</p>
+          <p className='flex justify-center'>{Maestria.precio}€</p>
+          <div className='flex justify-center'>
           <p><button className='bg-red-500' onClick={()=>{
               toast.dismiss()
               toast((t)=>(
@@ -22,7 +23,7 @@ export default function TarjetasMaestrias({Maestria}) {
                               console.log(res)
                               if(res.status===204){
                                   toast.dismiss()
-                                  toast.success("Se ha eliminado al usuario con exito")
+                                  toast.success("Se ha eliminado el servicio con exito")
                               }
                           })
                           .catch(error=>{
@@ -48,6 +49,7 @@ export default function TarjetasMaestrias({Maestria}) {
                   }
               })
           }}>Eliminar</button></p>
+          </div>
       </div>
     )
 }

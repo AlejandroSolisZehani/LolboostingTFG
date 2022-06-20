@@ -8,11 +8,12 @@ export default function TarjetasEloboosts({Eloboost}) {
   return (
     <div className='bg-zinc-800 text-white rounded-sm shadow-sm shadow-black
     hover:bg-zinc-700 hover:cursor-pointer'>
-        <p>{Eloboost.titulo}</p>
-        <p>{Eloboost.campeon_preferido} Campeon Preferente</p>
-        <p>{Eloboost.rol_preferidos} Roles Preferido</p>
-        <p>{Eloboost.partidas} Partidas</p>
-        <p>{Eloboost.precio}€</p>
+        <p className='flex justify-center'>{Eloboost.titulo}</p>
+        <p className='flex justify-center'>{Eloboost.campeon_preferido} Campeon Preferente</p>
+        <p className='flex justify-center'>{Eloboost.rol_preferidos} Roles Preferido</p>
+        <p className='flex justify-center'>{Eloboost.partidas} Partidas</p>
+        <p className='flex justify-center'>{Eloboost.precio}€</p>
+        <div className='flex justify-center'>
         <p><button className='bg-red-500' onClick={()=>{
             toast.dismiss()
             toast((t)=>(
@@ -24,7 +25,7 @@ export default function TarjetasEloboosts({Eloboost}) {
                             console.log(res)
                             if(res.status===204){
                                 toast.dismiss()
-                                toast.success("Se ha eliminado al usuario con exito")
+                                toast.success("Se ha el servicio con exito")
                             }
                         })
                         .catch(error=>{
@@ -50,6 +51,7 @@ export default function TarjetasEloboosts({Eloboost}) {
                 }
             })
         }}>Eliminar</button></p>
+        </div>
     </div>
   )
 }

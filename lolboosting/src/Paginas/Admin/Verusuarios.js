@@ -62,7 +62,7 @@ function Verusuarios() {
     },[Usuarios])
   return (
     
-        <div className='grid grid-cols-1 gap-10'>
+        <div className='mb-10 gap-10 grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2'>
             {Usuarios.map(Usuario=>(
                 <TarjetasUsuarios Users={Usuario} key={Usuario._id}/>
             ))}

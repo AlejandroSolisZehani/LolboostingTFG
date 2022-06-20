@@ -44,7 +44,7 @@ export default function VerTodoslosBoosts() {
             </div>
             </div>
             
-        <div className='grid grid-cols-1 gap-10 mb-10 mt-10'>
+        <div className='gap-10 mb-10 mt-10 grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2'>
         {Boost.filter(Boost=> Boost.activo===true).map(Boost=>(
             <TarjetasBoosts Boost={Boost} key={Boost._id}/>
         ))}

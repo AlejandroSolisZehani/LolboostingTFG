@@ -34,7 +34,7 @@ export default function VerTodoslosProductos() {
     return <div>
       No hay Productos todavia :/ </div>
   }else{
-      return <div className='grid grid-cols-1 gap-10 mb-10'>
+      return <div className='gap-10 mb-10 mt-10 grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2'>
             {Producto.filter(Producto=> Producto.activo===true).map(Producto=>(
                 <TarjetasProductos Productos={Producto} key={Producto._id}/>
             ))}

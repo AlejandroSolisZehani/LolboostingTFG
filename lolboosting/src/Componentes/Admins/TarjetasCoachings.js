@@ -8,11 +8,12 @@ export default function TarjetasCoachings({Coach}) {
   return (
     <div className='bg-zinc-800 text-white rounded-sm shadow-sm shadow-black
     hover:bg-zinc-700 hover:cursor-pointer'>
-        <p>{Coach.titulo}</p>
-        <p>{Coach.idioma} Lenguaje del Coach</p>
-        <p>{Coach.roles_preferidos} Roles Dominantes</p>
-        <p>{Coach.partidas} Partidas</p>
-        <p>{Coach.precio}€</p>
+        <p className='flex justify-center'>{Coach.titulo}</p>
+        <p className='flex justify-center'>{Coach.idioma} Lenguaje del Coach</p>
+        <p className='flex justify-center'>{Coach.roles_preferidos} Roles Dominantes</p>
+        <p className='flex justify-center'>{Coach.partidas} Partidas</p>
+        <p className='flex justify-center'>{Coach.precio}€</p>
+        <div className='flex justify-center'>
         <p><button className='bg-red-500' onClick={()=>{
             toast.dismiss()
             toast((t)=>(
@@ -24,7 +25,7 @@ export default function TarjetasCoachings({Coach}) {
                             console.log(res)
                             if(res.status===204){
                                 toast.dismiss()
-                                toast.success("Se ha eliminado al usuario con exito")
+                                toast.success("Se ha eliminado el servicio con exito")
                             }
                         })
                         .catch(error=>{
@@ -50,6 +51,7 @@ export default function TarjetasCoachings({Coach}) {
                 }
             })
         }}>Eliminar</button></p>
+        </div>
     </div>
   )
 }

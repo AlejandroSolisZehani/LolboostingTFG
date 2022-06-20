@@ -44,7 +44,7 @@ export default function VerTodasLasMaestrias() {
             <button className='bg-orange-500 mb-10' onClick={()=>{navigate("/maestria")}}>Solicitar Maestria</button><br></br>
             </div>
             </div>
-            <div className='grid grid-cols-1 gap-10 mt-20 mb-10'>
+            <div className='gap-10 mb-10 mt-20 grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2'>
         {Maestria.filter(Maestria=> Maestria.activo===true).map(Maestria=>(
             <TarjetaMaestrias Maestria={Maestria} key={Maestria._id}/>
         ))}

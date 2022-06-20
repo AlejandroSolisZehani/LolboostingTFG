@@ -7,9 +7,10 @@ function TarjetasUsuarios({Users}) {
   return (
     <div className='bg-zinc-800 text-white rounded-sm shadow-sm shadow-black
     hover:bg-zinc-700 hover:cursor-pointer'>
-        <p>{Users.email_usuario}</p>
-        <p>{Users.roles}</p>
-        <p><button className='bg-red-500' onClick={()=>{
+        <p className='flex justify-center text-sm'>{Users.email_usuario}</p>
+        <p className='flex justify-center text-2xl'>{Users.roles}</p>
+        <div className='flex justify-center'>
+        <p className='text-3xl'><button className='bg-red-500' onClick={()=>{
             toast.dismiss()
             toast((t)=>(
                 <div className='text-2xl text-white'>
@@ -46,6 +47,7 @@ function TarjetasUsuarios({Users}) {
                 }
             })
         }}>Eliminar</button></p>
+        </div>
     </div>
   )
 }

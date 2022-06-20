@@ -37,7 +37,7 @@ function Vercuentas() {
       <button className='bg-orange-500 mb-20' onClick={()=>{navigate("/vendercuenta")}}>Vender Cuenta</button><br></br>
       </div>
       </div>
-      <div className='grid grid-cols-1 gap-10 mb-10 mt-10'>
+      <div className='gap-10 mb-10 mt-10 grid grid-cols-1 xl:grid-cols-3 lg:grid-cols-2'>
         {cuentas.filter(cuenta=> cuenta.activo===true).map(cuenta=>(
             <Tarjetavercuentas cuentadatos={cuenta} key={cuenta._id}/>
         ))}
