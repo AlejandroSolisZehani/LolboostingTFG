@@ -41,7 +41,7 @@ export default function UsuarioMaestrias() {
   return (
     <div className='container'>
         <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link>/<Link to='/miperfil'>Mi Perfil</Link>/Maestrias</div>
-        <h1 className='flex justify-center text-white text-3xl mb-3 mt-3'>Solicitudes Subida de Maestrias</h1>
+        <h1 className='flex justify-center text-white text-3xl mb-3 mt-3'>Solicitudes Contratadas de Boost de Maestrias</h1>
         <div className='grid grid-cols-1 gap-10'>
             {Maestria.filter(Maestria=> Maestria.id_cliente===localStorage.getItem("IdUsuario")).map(Maestria=>(
                 <TarjetaUsuariosMaestria Maestrias={Maestria} key={Maestria._id}/>
@@ -49,7 +49,7 @@ export default function UsuarioMaestrias() {
     
         </div>
         <div>
-            <h1 className='flex justify-center text-white text-3xl mb-3 mt-3'>Servicios de Maestrias Solicitados</h1>
+            <h1 className='flex justify-center text-white text-3xl mb-3 mt-3'>Servicios de Boost Maestrias Realizados</h1>
             <div className='grid grid-cols-1 gap-10'>
             {Maestria.filter(Maestria=> Maestria.id_booster===localStorage.getItem("IdUsuario")).map(Maestria=>(
                 <TarjetaUsuariosMaestria Maestrias={Maestria} key={Maestria._id}/>

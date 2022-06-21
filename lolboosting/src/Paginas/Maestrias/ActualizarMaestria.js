@@ -38,7 +38,7 @@ function ActualizarMaestria() {
             No se ha encontrado la Maestria</div>
     }
     return <div>
-        <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link>/<Link to='/maestrias'>/Maestrias</Link>/EditarMaestria</div>
+        <div className='text-2xl text-white'><Link to='/'>Lolboosting</Link><Link to='/maestrias'>/Maestrias</Link>/EditarMaestria</div>
     
     <div className='divBox flex items-center justify-center text-white mb-10'>
         <Formik

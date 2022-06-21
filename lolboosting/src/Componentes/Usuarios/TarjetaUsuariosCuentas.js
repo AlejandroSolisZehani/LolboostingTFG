@@ -64,7 +64,7 @@ function TarjetaUsuariosCuentas({Cuentas}) {
         }}>Eliminar</button>
       </div></div>
     )
-  }else if(localStorage.getItem("IdUsuario")==Cuentas.id_vendedor && Cuentas.id_comprador!=""){
+  }else if(localStorage.getItem("IdUsuario")==Cuentas.id_vendedor && Cuentas.id_comprador!==""){
     return (
       <div className='bg-zinc-800 text-white rounded-sm shadow-sm shadow-black
       hover:bg-zinc-700 hover:cursor-pointer'>

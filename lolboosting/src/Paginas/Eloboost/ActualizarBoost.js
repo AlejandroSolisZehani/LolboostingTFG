@@ -88,7 +88,6 @@ function ActualizarBoost() {
                         <option value="Mid">Medio</option>
                         <option value="Adc">Tirador</option>
                         <option value="Support">Soporte</option>
-                     
                       </Field><br/>
                       <ErrorMessage name='rol_preferido' className='text-red-900' component="p"></ErrorMessage><br/>
                       <label>Nombre de la cuenta</label><br/>
