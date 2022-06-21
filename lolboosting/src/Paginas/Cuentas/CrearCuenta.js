@@ -255,7 +255,7 @@ function CrearCuenta() {
              <label>Aspectos</label><br></br>
              <Field name="aspectos" placeholder="aspectos"  className='text-black'/><br/>
              <ErrorMessage name='aspectos' className='text-red-900' component="p"></ErrorMessage><br></br>
-             <label>Rando temporada pasada</label><br></br>
+             <label>Rango temporada pasada</label><br></br>
              <Field component="select" name="rango_temporada_pasada" className='text-black'>
                <option defaultValue="Seleccioneunaopcion">Seleciona una opcion</option>
                <option value="Sinrango">Sin rango</option>

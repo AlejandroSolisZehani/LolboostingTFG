@@ -118,8 +118,8 @@ function TarjetaProducto({Producto}) {
       hover:bg-zinc-700 hover:cursor-pointer'>
         <div>
           <div>
-          <p className='flex justify-center'>{Producto._id}</p>
-          <h1 className='flex justify-center'>{Producto.titulo}</h1>
+          <p className='flex justify-center xl-2'>{Producto.titulo}</p>
+          <h1 className='flex justify-center'>{Producto.detalles}</h1>
           <div className='flex justify-center'>
           <img src={Producto.imagenes} alt='Imagen del producto' className='flex justify-center w-96'/>
           </div>

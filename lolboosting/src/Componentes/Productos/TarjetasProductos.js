@@ -10,9 +10,7 @@ function TarjetasProductos({Productos}) {
     <div className='px-4 py-7'>
       <div className='flex justify-center text-2xl'>
       <h4>{Productos.titulo}</h4>
-      
       </div>
-      <p  className='flex justify-center'>Descripcion: <br></br>{Productos.detalles}</p>
       <div className='flex justify-center'>
       <img src={Productos.imagenes} alt={Productos.titulo}  className='w-96'/>
       </div>

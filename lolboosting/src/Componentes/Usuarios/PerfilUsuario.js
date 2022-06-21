@@ -87,8 +87,8 @@ export function PerfilUsuario({Perfil}) {
       <div className='flex justify-center mb-6 mt-3 text-light-200'>
          <div><img src={Perfil.url_imagen} alt='Imagen de perfil' className='rounded-full mt-2 mb-2'/></div>
       </div>
-      <div className='flex justify-center text-2xl mt-3 mb-6'>
-      <button className='bg-red-600 hover:bg-red-500 px-3 py-3' onClick={()=>{
+      <div className='flex justify-center text-3xl mt-3 mb-6 px-3 py-3'>
+      <button className='bg-red-600 hover:bg-red-500' onClick={()=>{
         localStorage.clear()
         navigate("/")
         toast.success("Se ha cerrado la sesión",{style:{background:"#5cfaff"}})
@@ -116,7 +116,7 @@ export function PerfilUsuario({Perfil}) {
         </strong>
         </p>
       </div>
-      <div className='flex justify-center mt-3 mb-6 w-full'>
+      <div className='flex justify-center mt-3 mb-6'>
       <p className='hover:bg-stone-600'>Correo Usuario<br></br>
         <strong >
           {Perfil.email_usuario}
@@ -130,14 +130,14 @@ export function PerfilUsuario({Perfil}) {
         </strong>
         </p>
       </div>
-      <div className='flex justify-center text-2xl mt-3 mb-6'>
-      <button className='bg-blue-600 hover:bg-blue-400 px-3 py-3' onClick={()=>{navigate("/modificarperfil")}}>Editar</button>
+      <div className='flex justify-center text-3xl mt-3 mb-6  px-3 py-3'>
+      <button className='bg-blue-600 hover:bg-blue-400' onClick={()=>{navigate("/modificarperfil")}}>Editar</button>
       </div>
-      <div className='flex justify-center text-2xl mt-3 mb-6'>
-      <button onClick={()=>transferir()} className='bg-red-600 hover:bg-red-400 px-3 py-3'>Transferir Saldo</button>
+      <div className='flex justify-center text-3xl mt-3 mb-6  px-3 py-3'>
+      <button onClick={()=>transferir()} className='bg-red-600 hover:bg-red-400'>Transferir Saldo</button>
       </div>
-      <div className='flex justify-center text-2xl mt-3 mb-6'>
-        <button className='bg-blue-300 px-3 py-3' onClick={()=>{servicios()}}>Ver mis servicios / cuentas</button>
+      <div className='flex justify-center text-3xl mt-3 mb-6 px-3 py-3'>
+        <button className='bg-blue-300' onClick={()=>{servicios()}}>Ver mis servicios / cuentas</button>
       </div>
       </>
     )
@@ -147,11 +147,11 @@ export function PerfilUsuario({Perfil}) {
       <div className='flex justify-center mb-6 mt-2 text-light-200'>
          <div><img src={Perfil.url_imagen} alt='Imagen de perfil' className='rounded-full mt-2 mb-2'/></div>
       </div>
-      <div className='flex justify-center text-3xl mt-3 mb-6'>
-        <button className='bg-green-400 px-3 py-3' onClick={()=>{navigate("/admin")}}>Panel de Admins</button>
+      <div className='flex justify-center text-3xl mt-3 mb-6 px-3 py-3'>
+        <button className='bg-green-400' onClick={()=>{navigate("/admin")}}>Panel de Admins</button>
       </div>
-      <div className='flex justify-center text-2xl mt-3 mb-6'>
-      <button className='bg-red-600 hover:bg-red-500 px-3 py-3' onClick={()=>{
+      <div className='flex justify-center text-3xl mt-3 mb-6 px-3 py-3'>
+      <button className='bg-red-600 hover:bg-red-500' onClick={()=>{
         localStorage.clear()
         navigate("/")
         toast.success("Se ha cerrado la sesión",{style:{background:"#5cfaff"}})
@@ -193,14 +193,14 @@ export function PerfilUsuario({Perfil}) {
         </strong>
         </p>
       </div>
-      <div className='flex justify-center text-2xl mt-3 mb-6'>
-      <button className='bg-blue-600 hover:bg-blue-400 px-3 py-3' onClick={()=>{navigate("/modificarperfil")}}>Editar</button>
+      <div className='flex justify-center text-3xl mt-3 mb-6 px-3 py-3'>
+      <button className='bg-blue-600 hover:bg-blue-400' onClick={()=>{navigate("/modificarperfil")}}>Editar</button>
       </div>
-      <div className='flex justify-center text-2xl mt-3 mb-6'>
-      <button onClick={()=>transferir()} className='bg-red-600 hover:bg-red-400 px-3 py-3'>Transferir Saldo</button>
+      <div className='flex justify-center text-3xl mt-3 mb-6 px-3 py-3'>
+      <button onClick={()=>transferir()} className='bg-red-600 hover:bg-red-400'>Transferir Saldo</button>
       </div>
-      <div className='flex justify-center text-2xl mt-3 mb-6'>
-        <button className='bg-blue-300 px-3 py-3' onClick={()=>{servicios()}}>Ver mis servicios / cuentas</button>
+      <div className='flex justify-center text-3xl mt-3 mb-6 px-3 py-3'>
+        <button className='bg-blue-300' onClick={()=>{servicios()}}>Ver mis servicios / cuentas</button>
       </div>
 
       </>

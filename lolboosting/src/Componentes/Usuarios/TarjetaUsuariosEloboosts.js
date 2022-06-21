@@ -8,17 +8,17 @@ function TarjetaUsuariosEloboosts({Eloboost}) {
     return (
       <div className='bg-zinc-800 text-white rounded-sm shadow-sm shadow-black
       hover:bg-zinc-700 hover:cursor-pointer'>
-        <p>ID: {Eloboost._id}</p>
-        <p>Titulo: {Eloboost.titulo}</p>
-        <p>Liga Inicial: {Eloboost.liga_inicio}</p>
-        <p>Liga Deseada: {Eloboost.liga_deseada}</p>
-        <p>Precio: {Eloboost.precio}€</p>
-        <p>Rol Preferido: {Eloboost.rol_preferido}</p>
-        <p>ID Booster: {Eloboost.id_booster}</p>
-        <p>ID Cliente: {Eloboost.id_cliente}</p>
-        <p>Nombre Invocador: {Eloboost.nombre_cuenta}</p>
-        <p>Contraseña Cuenta: {Eloboost.passwd_cuenta}</p>
-        <p>Campeon Preferido: {Eloboost.campeon_preferido}</p>
+        <p className='flex justify-center'>ID: {Eloboost._id}</p>
+        <p className='flex justify-center'>Titulo: {Eloboost.titulo}</p>
+        <p className='flex justify-center'>Liga Inicial: {Eloboost.liga_inicio}</p>
+        <p className='flex justify-center'>Liga Deseada: {Eloboost.liga_deseada}</p>
+        <p className='flex justify-center'>Precio: {Eloboost.precio}€</p>
+        <p className='flex justify-center'>Rol Preferido: {Eloboost.rol_preferido}</p>
+        <p className='flex justify-center'>ID Booster: {Eloboost.id_booster}</p>
+        <p className='flex justify-center'>ID Cliente: {Eloboost.id_cliente}</p>
+        <p className='flex justify-center'>Nombre Invocador: {Eloboost.nombre_cuenta}</p>
+        <p className='flex justify-center'>Contraseña Cuenta: {Eloboost.passwd_cuenta}</p>
+        <p className='flex justify-center'>Campeon Preferido: {Eloboost.campeon_preferido}</p>
         <div className='flex justify-center'>
           <button className='flex justify-center bg-red-500 text-3xl' onClick={()=>{
                           toast.dismiss()

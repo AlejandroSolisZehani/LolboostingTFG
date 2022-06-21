@@ -328,7 +328,7 @@ function CrearSolicitud() {
               <Field name="nombre_cuenta" className='text-black' placeholder='Nombre cuenta'></Field><br/>
               <ErrorMessage name='nombre_cuenta' className='text-red-900' component="p"></ErrorMessage><br/>
               <label>Contraseña de la cuenta</label><br/>
-              <Field name="passwd_cuenta" className='text-black'></Field><br/>
+              <Field name="passwd_cuenta" className='text-black' type='password'></Field><br/>
               <ErrorMessage name='passwd_cuenta' className='text-red-900' component="p"></ErrorMessage><br/>
               <label>Campeon / Campeones Preferidos</label><br/>
               <Field name="campeon_preferido" className='text-black' placeholder='Skarner'></Field><br/>

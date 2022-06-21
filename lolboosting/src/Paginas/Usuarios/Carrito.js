@@ -27,7 +27,7 @@ function Carrito() {
             <CarritoComponente Valor={Carrito} key={Carrito._id}/>
             </div>
         ))}
-        <div className='flex justify-center'><button className='bg-orange-300 w-full' onClick={()=>{
+        <div className='flex justify-center'><button className='bg-orange-300 text-3xl px-3 py-3 mt-5 mb-5' onClick={()=>{
             toast.success("Se han comprado todos los productos Superiores a 0")
             localStorage.removeItem("Carrito")
             navigate("/carrito")

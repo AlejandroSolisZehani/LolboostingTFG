@@ -105,7 +105,7 @@ function CrearBoostMaestria() {
              <ErrorMessage name='maestria_deseada' className='text-red-900' component="p"></ErrorMessage>
              <br/>
              <label>Nombre de invocador</label><br/>
-             <Field name="nombre_cuenta" placeholder="aspectos" className='text-black'/><br/>
+             <Field name="nombre_cuenta" placeholder="contraseña" className='text-black'/><br/>
              <ErrorMessage name='nombre_cuenta' className='text-red-900' component="p"></ErrorMessage><br></br>
              <label>Contraseña de la cuenta</label><br/>
              <Field name="passwd_cuenta" placeholder="aspectos" type="password" className='text-black'/><br/>

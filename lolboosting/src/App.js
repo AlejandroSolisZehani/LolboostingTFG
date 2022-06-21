@@ -106,14 +106,14 @@ function App() {
     <div className='max-w-[1920px] mx-auto py-16 px-4 grid lg:grid-cols-3 gap-8 text-gray-300 bg-black md:flex justify-center'>
     <div>
     <h1 className='w-full text-3xl font-bold m-4'>Contacto</h1>
-    <p>alejandrosoliszehanitfg@gmail.com</p>
+    <p>alejandrosoliszehani@gmail.com</p>
     <p>Copyright © Alejandro Solís Zehani</p>
     <div className=' md:w-[75%] flex justify-between py-6'>
-      <FaFacebookSquare size={30}/>
-      <FaInstagram size={30}/>
-      <FaTwitterSquare size={30}/>
-      <FaGithubSquare size={30}/>
-      <AiOutlineMail size={30}/>
+      <a href='https://twitter.com/'><FaFacebookSquare size={30}/></a>
+      <a href='https://www.instagram.com/'><FaInstagram size={30}/></a>
+      <a href='https://twitter.com/'><FaTwitterSquare size={30}/></a>
+      <a href='https://github.com/AlejandroSolisZehani'><FaGithubSquare size={30}/></a>
+      <a href='https://mail.google.com/mail/u/5/?ogbl#inbox'><AiOutlineMail size={30}/></a>
     </div>
     </div>  
     </div>
